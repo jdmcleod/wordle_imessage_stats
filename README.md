@@ -25,7 +25,7 @@ This will output data in the console
 ```bash
 Stats for My Friend:
 Total Wordles: 84
-Scores:|2:1||3:20||4:39||5:15||6:9|X|0
+Scores:|2:1||3:20||4:39||5:15||6:9|X:0|
 Average score: 4.13
 Average greens on first guess: 0.49
 Percent greens: 45.13

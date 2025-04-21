@@ -63,7 +63,7 @@ class PersonStats
   end
 
   def print_losses
-    print "X|#{wordles.count(&:lost?)}"
+    print "X:#{wordles.count(&:lost?)}|"
   end
 
   def print_percent_green
