@@ -29,7 +29,7 @@ class PersonStats
   end
 
   def print_average
-    avg = average(wordles.sum(&:score), wordles.count)
+    avg = average(wordles.sum(&:score_for_average), wordles.count)
     puts "Average score: #{avg}"
   end
 

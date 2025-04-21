@@ -39,9 +39,13 @@ class Wordle
     data.split("\n").map(&:strip)
   end
 
-  def score
+  def score_for_average
     return 7 if lost?
 
+    score
+  end
+
+  def score
     parsed_data.length
   end
 
@@ -54,7 +58,7 @@ class Wordle
   end
 
   def lost?
-    parsed_data.length == 6 && parsed_data.last.count('🟩') != 5
+    score == 6 && parsed_data.last.count('🟩') != 5
   end
 
   def greens
