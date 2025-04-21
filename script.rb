@@ -1,19 +1,17 @@
-data = File.read('data.txt')
+# frozen_string_literal: true
+
+chat = File.read('chat.txt')
+
 require_relative 'wordle'
 require_relative 'person_stats'
 
 wordle_summaries = []
-other_messages = []
 
-lines = data.split("\n")
+lines = chat.split("\n")
+
 lines.each.with_index do |line, index|
-  if line.match?(/^Wordle \d+/)
-    wordle_summaries << Wordle.parse(index, lines)
-  else
-    # other_messages << line.strip
-  end
+  wordle_summaries << Wordle.parse(index, lines) if line.match?(Wordle::REGEXP)
 end
-
 
 grouped = wordle_summaries.group_by(&:person)
 

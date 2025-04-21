@@ -2,6 +2,8 @@ require 'date'
 require_relative 'contact'
 
 class Wordle
+  REGEXP = /^Wordle \d+/
+
   attr_reader :person, :wordle_number, :date, :data
 
   def initialize(person, wordle_number, date, data)
@@ -54,10 +56,6 @@ class Wordle
   end
 
   def greens
-    parsed_data.sum { _1.count('🟩') }
-  end
-
-  def yellows
     parsed_data.sum { _1.count('🟩') }
   end
 
