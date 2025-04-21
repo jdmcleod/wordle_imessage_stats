@@ -37,3 +37,23 @@ Average hour submitted: 8:39 AM
 Now add whatever epic stats you want!
 
 Pro tip: Copy and paste the output into the AI of your choice and ask it to make charts for you. 
+
+A good prompt for chatGPT:
+
+Analyze these world statistics and create a chart with the columns
+
+- Name
+- Average score
+- Total Wordles
+- Most frequent guess
+- Amount of times with score of 1
+- Amount of times with score of 2
+- Amount of losses
+- Avg greens/First guess
+- Percent greens
+- Percent yellows
+- Avg time
+
+Statistics: <paste results here>
+
+That will produce something like this: 
