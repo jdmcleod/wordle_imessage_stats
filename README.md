@@ -4,7 +4,7 @@ If you have an imessage chat where you post wordles, this will give you epic sta
 
 ## Setup (for mac)
 
-- `brew install imessage-exporter`
+- `brew install imessage-exporter` (verify that you are comfortable running this third party tool)
 - Open system preferences and enable full disc access for your terminal app
 - Restart the terminal
 - Run `imessage-exporter -f txt` to export all your iMessages to a folder in your home directory 
