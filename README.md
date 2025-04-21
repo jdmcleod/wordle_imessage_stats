@@ -40,6 +40,7 @@ Pro tip: Copy and paste the output into the AI of your choice and ask it to make
 
 A good prompt for chatGPT:
 
+```
 Analyze these world statistics and create a chart with the columns
 
 - Name
@@ -55,6 +56,7 @@ Analyze these world statistics and create a chart with the columns
 - Avg time
 
 Statistics: <paste results here>
+```
 
 That will produce something like this: 
 ![CleanShot 2025-04-20 at 20 39 18@2x](https://github.com/user-attachments/assets/64502e97-5e97-4cdc-b29d-21b35bda934e)
