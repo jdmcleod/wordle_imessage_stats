@@ -40,6 +40,8 @@ class Wordle
   end
 
   def score
+    return 7 if lost?
+
     parsed_data.length
   end
 
@@ -52,7 +54,7 @@ class Wordle
   end
 
   def lost?
-    score == 6 && parsed_data.last.count('🟩') != 5
+    parsed_data.length == 6 && parsed_data.last.count('🟩') != 5
   end
 
   def greens
