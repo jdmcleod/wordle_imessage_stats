@@ -15,6 +15,7 @@ class PersonStats
     print_percent_green
     print_percent_yellows
     print_no_yellows
+    print_blank_first_guesses
     print_average_time
     puts ''
   end
@@ -80,5 +81,9 @@ class PersonStats
 
   def print_no_yellows
     puts "No yellows: #{wordles.count { |w| w.yellows.zero? }}"
+  end
+
+  def print_blank_first_guesses
+    puts "Blank first guesses: #{wordles.count(&:first_guess_blank?)}"
   end
 end

@@ -76,4 +76,8 @@ class Wordle
   def total_letters
     score * 5
   end
+
+  def first_guess_blank?
+    parsed_data.first.chars.all?('⬜') || parsed_data.first.chars.all?('⬛')
+  end
 end
