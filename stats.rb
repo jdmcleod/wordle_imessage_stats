@@ -21,7 +21,6 @@ end.sort_by { _1[:avg] }
 options = {
   color_scales: :avg,
   color: true,
-  # theme: :dark,
   columns: stats.first.keys,
   row_numbers: true,
   title: 'Wordle Stats',

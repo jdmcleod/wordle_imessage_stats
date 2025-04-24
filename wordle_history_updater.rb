@@ -32,8 +32,8 @@ class WordleHistoryUpdater
       word.text
           .gsub("\t", '')
           .gsub("\n", '')
-          .delete('Today')
-          .delete('Reveal')
+          .gsub('Today', '')
+          .gsub('Reveal', '')
           .split(' ')
           .map(&:strip)
           .compact # -> [month, day, number, word]
