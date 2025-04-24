@@ -3,6 +3,7 @@
 require 'csv'
 require 'date'
 require_relative 'wordle_chat_parser'
+require_relative 'most_impressive_guess'
 
 begin
   first_line = CSV.read('history.csv').first
@@ -20,7 +21,8 @@ total = grouped.count
 
 words = grouped.map do |answer, wordles|
   average_score = (wordles.sum(&:score_for_average) / wordles.count.to_f).round(2)
-  [answer, average_score, wordles.first.date.strftime('%b %d %Y')]
+  most_impressive_guesser = MostImpressiveGuess.new(wordles).calculate
+  [answer, average_score, wordles.first.date.strftime('%b %d %Y'), most_impressive_guesser]
 end
 
 todays_wordle = words.last
@@ -36,3 +38,9 @@ todays_difficulty_percentile = ((todays_index.to_f / total.to_f) * 100.0).round
 puts formatted
 
 puts "\n⏰ Today's word (#{todays_wordle.first}) scored in the #{todays_difficulty_percentile}% of difficulty (out of #{total}) with an average of #{todays_wordle[1]}"
+puts "👏Today's most impressive guess was from #{todays_wordle.last}"
+
+puts "\nMost impressive guessers"
+sorted.group_by(&:last).sort_by { _2.count }.each do |guesser, wordles|
+  puts "#{guesser} (#{wordles.count})"
+end

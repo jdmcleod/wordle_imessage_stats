@@ -41,4 +41,8 @@ class Guess
   def incorrect
     !correct
   end
+
+  def weighted_hints
+    (greens * 2) + yellows
+  end
 end
