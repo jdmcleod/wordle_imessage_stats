@@ -33,4 +33,12 @@ class Guess
   def blank?
     data.chars.all?('⬜') || data.chars.all?('⬛')
   end
+
+  def correct
+    greens != 5
+  end
+
+  def incorrect
+    !correct
+  end
 end

@@ -4,8 +4,6 @@ require_relative 'history_manager'
 require_relative 'guess'
 
 class Wordle
-  REGEXP = /^Wordle \d+/
-
   attr_reader :person, :wordle_number, :date, :data
 
   def initialize(person, wordle_number, date, data)
@@ -13,28 +11,6 @@ class Wordle
     @wordle_number = wordle_number
     @date = date
     @data = data
-  end
-
-  def self.parse(index, lines)
-    line = lines[index]
-    wordle_number = line.gsub(',', '').match(/Wordle (\d+)/)[1]
-    date = DateTime.parse(lines[index - 2])
-    person = lines[index - 1]
-    data = extract_wordle_block_from(lines[index + 2], lines[index + 3..index + 8])
-    new(person, wordle_number, date, data)
-  end
-
-  def self.extract_wordle_block_from(starting_line, remaining_lines)
-    block = [starting_line]
-
-    remaining_lines.each do |line|
-      line = line.strip
-      break unless line.match?(/^[⬜⬛🟩🟨]+$/)
-
-      block << line
-    end
-
-    block.join("\n")
   end
 
   def guesses
@@ -64,7 +40,7 @@ class Wordle
   end
 
   def lost?
-    score == 6 && guesses.last.greens != 5
+    score == 6 && guesses.last.correct
   end
 
   def greens
