@@ -35,4 +35,4 @@ todays_difficulty_percentile = ((todays_index.to_f / total.to_f) * 100.0).round
 
 puts formatted
 
-puts "\n⏰ Today's word is #{todays_wordle.first} and was in the #{todays_difficulty_percentile}% of difficulty with an average of #{todays_wordle[1]}"
+puts "\n⏰ Today's word (#{todays_wordle.first}) scored in the #{todays_difficulty_percentile}% of difficulty (out of #{total}) with an average of #{todays_wordle[1]}"

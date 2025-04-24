@@ -1,14 +1,15 @@
 GEM
+  remote: https://rubygems.org/
   specs:
-    date (3.3.4)
+    csv (3.3.4)
     diff-lcs (1.5.0)
-    nokogiri (1.16.5-arm64-darwin)
+    ffi (1.17.2-arm64-darwin)
+    memo_wise (1.11.0)
+    nokogiri (1.18.8-arm64-darwin)
       racc (~> 1.4)
     open-uri (0.1.0)
-      stringio
-      time
-      uri
-    racc (1.8.0)
+    paint (2.3.0)
+    racc (1.8.1)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -22,18 +23,28 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
-    stringio (3.1.0)
-    time (0.1.0)
-      date
-    uri (0.10.1)
+    table_tennis (0.0.3)
+      csv (~> 3.3)
+      ffi (~> 1.17)
+      memo_wise (~> 1.11)
+      paint (~> 2.3)
+      unicode-display_width (~> 3.1)
+    unicode-display_width (3.1.4)
+      unicode-emoji (~> 4.0, >= 4.0.4)
+    unicode-emoji (4.0.4)
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-24
 
 DEPENDENCIES
   nokogiri
   open-uri
   rspec
+  table_tennis
+
+RUBY VERSION
+   ruby 3.4.1p0
 
 BUNDLED WITH
    2.3.15

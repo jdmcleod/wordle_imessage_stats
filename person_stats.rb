@@ -6,7 +6,7 @@ class PersonStats
     @wordles = wordles
   end
 
-  def calculate
+  def print_calculate
     puts "Stats for #{person}:"
     puts "Total Wordles: #{wordles.count}"
     print_scores
@@ -21,6 +21,23 @@ class PersonStats
     puts ''
   end
 
+  def calculate
+    {
+      name: person,
+      total: wordles.count,
+      avg: average,
+      one: wordles.count { |w| w.score == 1 },
+      two: wordles.count { |w| w.score == 2 },
+      lost: wordles.count(&:lost?),
+      gFirst: greens_on_first_guess,
+      nYel: no_yellows,
+      blank: blank_first_guesses,
+      errors: errors,
+      avgTime: average_time,
+    }
+  end
+
+
   def print_scores
     print 'Scores:'
     wordles.group_by(&:score).sort_by { _1 }.each do |score, wordles|
@@ -30,25 +47,34 @@ class PersonStats
     puts ''
   end
 
+  def average
+    calc_average(wordles.sum(&:score_for_average), wordles.count)
+  end
+
   def print_average
-    avg = average(wordles.sum(&:score_for_average), wordles.count)
-    puts "Average score: #{avg}"
+    puts "Average score: #{average}"
+  end
+
+  def greens_on_first_guess
+    number = wordles.sum(&:greens_on_first_guess)
+    calc_average(number, wordles.count)
   end
 
   def print_greens_on_first_guess
-    number = wordles.sum(&:greens_on_first_guess)
-
-    puts "Average greens on first guess: #{average(number, wordles.count)}"
+    puts "Average greens on first guess: #{greens_on_first_guess}"
   end
 
-  def average(number, total)
+  def calc_average(number, total)
     (number.to_f / total).round(2)
   end
 
+  def average_time
+    avg = calc_average(wordles.map(&:date).sum(&:hour), wordles.count)
+    format_hour(avg)
+  end
+
   def print_average_time
-    avg = average(wordles.map(&:date).sum(&:hour), wordles.count)
-    formatted_time = format_hour(avg)
-    puts "Average hour submitted: #{formatted_time}"
+    puts "Average hour submitted: #{average_time}"
   end
 
   def format_hour(decimal_hour)
@@ -80,15 +106,27 @@ class PersonStats
     puts "Percent yellows: #{percent_yellow}"
   end
 
+  def no_yellows
+    wordles.count { |w| w.yellows.zero? }
+  end
+
   def print_no_yellows
-    puts "No yellows: #{wordles.count { |w| w.yellows.zero? }}"
+    puts "No yellows: #{no_yellows}"
+  end
+
+  def blank_first_guesses
+    wordles.count(&:first_guess_blank?)
   end
 
   def print_blank_first_guesses
-    puts "Blank first guesses: #{wordles.count(&:first_guess_blank?)}"
+    puts "Blank first guesses: #{blank_first_guesses}"
+  end
+
+  def errors
+    wordles.sum(&:green_errors)
   end
 
   def print_errors
-    puts "Errors: #{wordles.sum(&:green_errors)}"
+    puts "Errors: #{errors}"
   end
 end
