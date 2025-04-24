@@ -19,10 +19,9 @@ stats = grouped.map do |person, wordles|
 end.sort_by { _1[:avg] }
 
 options = {
-  color_scales: { total: :g, avg: :gyr, two: :b, gFirst: :g, nYel: :b, blank: :y, errors: :r },
+  color_scales: { avg: :gyr, two: :b, gFirst: :g, nYel: :b, blank: :y, errors: :r },
   color: true,
   columns: stats.first.keys,
-  row_numbers: true,
   title: 'Wordle Stats',
   titleize: true,
   zebra: true,
