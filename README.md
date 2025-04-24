@@ -43,7 +43,7 @@ Make sure you have the necessary permissions to access your iMessage data. On re
 ```
 
 5. cd into the project directory
-6. run `ruby script.rb`
+6. run `ruby people_stats.rb` or `ruby word_difficulty.rb`
 
 This will output data in the console
 ```bash

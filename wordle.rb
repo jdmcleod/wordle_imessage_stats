@@ -1,5 +1,6 @@
 require 'date'
 require_relative 'contact'
+require_relative 'history_manager'
 
 class Wordle
   REGEXP = /^Wordle \d+/
@@ -47,6 +48,10 @@ class Wordle
 
   def score
     parsed_data.length
+  end
+
+  def answer
+    HistoryManager.instance.answer_for(wordle_number)
   end
 
   def time_string
