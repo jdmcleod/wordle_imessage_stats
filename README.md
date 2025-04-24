@@ -55,6 +55,7 @@ Stats output:
 
 Word difficulty output: 
 
-![CleanShot 2025-04-24 at 13 45 02@2x](https://github.com/user-attachments/assets/2fa62fcb-b9ba-4198-a084-514175964822)
+![CleanShot 2025-04-24 at 13 49 43@2x](https://github.com/user-attachments/assets/c6cfc0e7-f46f-482f-a609-8603fae8f142)
+
 
 Now add whatever epic stats you want!
