@@ -23,16 +23,16 @@ words = grouped.map do |answer, wordles|
   [answer, average_score, wordles.first.date.strftime('%b %d %Y')]
 end
 
-todays_word = words.last.first
+todays_wordle = words.last
 
 sorted = words.sort_by { _1[1] }
 formatted = sorted.map.with_index { "#{total - _2}. #{_1.join(', ')}" }
 
 puts "#{formatted.length} wordles"
 
-todays_index = sorted.index { _1.first == todays_word }
+todays_index = sorted.index { _1.first == todays_wordle.first }
 todays_difficulty_percentile = ((todays_index.to_f / total.to_f) * 100.0).round
 
 puts formatted
 
-puts "\n⏰ Today's word is #{todays_word} and was in the #{todays_difficulty_percentile}% of difficulty"
+puts "\n⏰ Today's word is #{todays_wordle.first} and was in the #{todays_difficulty_percentile}% of difficulty with an average of #{todays_wordle[1]}"
