@@ -1,6 +1,7 @@
 require 'date'
 require_relative 'contact'
 require_relative 'history_manager'
+require_relative 'guess'
 
 class Wordle
   REGEXP = /^Wordle \d+/
@@ -36,8 +37,8 @@ class Wordle
     block.join("\n")
   end
 
-  def parsed_data
-    data.split("\n").map(&:strip)
+  def guesses
+    @guesses ||= data.split("\n").map(&:strip).map { Guess.new(_1) }
   end
 
   def score_for_average
@@ -47,7 +48,7 @@ class Wordle
   end
 
   def score
-    parsed_data.length
+    guesses.length
   end
 
   def answer
@@ -59,23 +60,23 @@ class Wordle
   end
 
   def greens_on_first_guess
-    parsed_data.first.count("🟩")
+    guesses.first.greens
   end
 
   def lost?
-    score == 6 && parsed_data.last.count('🟩') != 5
+    score == 6 && guesses.last.greens != 5
   end
 
   def greens
-    parsed_data.sum { _1.count('🟩') }
+    guesses.sum(&:greens)
   end
 
   def yellows
-    parsed_data.sum { _1.count('🟨') }
+    guesses.sum(&:yellows)
   end
 
   def whites
-    parsed_data.sum { _1.count('⬜') + _1.count('⬛') }
+    guesses.sum(&:whites)
   end
 
   def total_letters
@@ -83,6 +84,19 @@ class Wordle
   end
 
   def first_guess_blank?
-    parsed_data.first.chars.all?('⬜') || parsed_data.first.chars.all?('⬛')
+    guesses.first.blank?
+  end
+
+  def green_errors
+    return 0 if guesses.size <= 1
+
+    errors = 0
+    guesses.each_cons(2) do |prev_guess, current_guess|
+      prev_greens = prev_guess.green_positions
+      current_greens = current_guess.green_positions
+
+      errors += (prev_greens - current_greens).size
+    end
+    errors
   end
 end
