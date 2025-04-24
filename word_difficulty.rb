@@ -1,6 +1,17 @@
 # frozen_string_literal: true
 
+require 'csv'
+require 'date'
 require_relative 'wordle_chat_parser'
+
+
+begin
+  first_line = CSV.read('history.csv').first
+  unless first_line && Date.parse(first_line[0]) == Date.today
+    require_relative 'wordle_history_updater'
+    WordleHistoryUpdater.new.update
+  end
+end
 
 worldes = WordleChatParser.new.parse
 

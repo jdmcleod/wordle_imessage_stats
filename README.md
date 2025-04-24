@@ -1,6 +1,10 @@
 # Wordle iMessage stats
 
-If you have an imessage chat where you post wordles, this will give you epic stats
+If you have an imessage chat where you post wordles, this will give you epic stats.
+
+Currently the two available scripts are:
+- `people_stats.rb` - Gives you stats for each person in the chat
+- `word_difficulty.rb` - Gives you stats for how hard each word in the chat was
 
 ## Setup (for mac)
 
