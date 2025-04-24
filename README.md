@@ -4,12 +4,36 @@ If you have an imessage chat where you post wordles, this will give you epic sta
 
 ## Setup (for mac)
 
-- `brew install imessage-exporter` (verify that you are comfortable running this third party tool)
-- Open system preferences and enable full disc access for your terminal app
-- Restart the terminal
-- Run `imessage-exporter -f txt` to export all your iMessages to a folder in your home directory 
-- Locate the .txt file for the chat you want to analyze and drag it into this directory and name it "chat.txt"
-- Create a file called contacts.json in the root of this directory and add contacts to it in the format:
+1. Clone this repository or download the script
+2. Make the script executable:
+   ```bash
+   chmod +x export_chat_history.sh
+   ```
+
+3. Run the script:
+   ```bash
+   ./export_chat_history.sh
+   ```
+The script will:
+   - Check if `imessage-exporter` is installed and install it if needed
+   - Export your iMessages to a temporary directory
+   - Display a numbered list of all available chat files
+Select a chat:
+   - You'll see a numbered list of all available chat files
+   - Enter the number corresponding to the chat you want to use
+   - The script will validate your selection
+Results:
+   - The selected chat will be copied to `chat.txt` in your current directory
+   - All temporary files will be automatically cleaned up
+Next steps:
+   - Create a `contacts.json` file if you haven't already
+   - The `chat.txt` file is ready for further processing
+
+## Note
+
+Make sure you have the necessary permissions to access your iMessage data. On recent macOS versions, you may need to grant Terminal full disk access in System Preferences > Security & Privacy > Privacy > Full Disk Access.
+
+4. Create a file called contacts.json in the root of this directory and add contacts to it in the format:
 ```json
 {
   "Me": "My Name",
@@ -18,8 +42,8 @@ If you have an imessage chat where you post wordles, this will give you epic sta
 }
 ```
 
-- cd into the project directory 
-- run `ruby script.rb`
+5. cd into the project directory
+6. run `ruby script.rb`
 
 This will output data in the console
 ```bash
@@ -36,7 +60,7 @@ Average hour submitted: 8:39 AM
 
 Now add whatever epic stats you want!
 
-Pro tip: Copy and paste the output into the AI of your choice and ask it to make charts for you. 
+Pro tip: Copy and paste the output into the AI of your choice and ask it to make charts for you.
 
 A good prompt for chatGPT:
 
@@ -58,7 +82,7 @@ Analyze these world statistics and create a chart with the columns
 Statistics: <paste results here>
 ```
 
-That will produce something like this: 
+That will produce something like this:
 ![CleanShot 2025-04-20 at 20 39 18@2x](https://github.com/user-attachments/assets/64502e97-5e97-4cdc-b29d-21b35bda934e)
 
 
