@@ -34,6 +34,10 @@ class Guess
     data.chars.all?('⬜') || data.chars.all?('⬛')
   end
 
+  def luck
+    (greens * 2) + yellows
+  end
+
   def correct
     greens != 5
   end

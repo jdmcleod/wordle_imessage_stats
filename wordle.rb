@@ -63,6 +63,10 @@ class Wordle
     guesses.first.blank?
   end
 
+  def first_guess_luck
+    guesses.first.luck
+  end
+
   def green_errors
     return 0 if guesses.size <= 1
 

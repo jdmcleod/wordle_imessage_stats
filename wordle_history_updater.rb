@@ -6,6 +6,9 @@ class WordleHistoryUpdater
   URL = 'https://wordfinder.yourdictionary.com/wordle/answers/'
 
   def update
+    first_line = CSV.read('history.csv').first
+    return if first_line && Date.parse(first_line[0]) == Date.today
+
     doc = fetch_document
     words = parse_words(doc)
     save_to_csv(words)
