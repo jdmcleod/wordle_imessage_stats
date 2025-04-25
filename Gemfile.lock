@@ -1,15 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    base64 (0.2.0)
     csv (3.3.4)
     diff-lcs (1.5.0)
     ffi (1.17.2-arm64-darwin)
+    logger (1.7.0)
     memo_wise (1.11.0)
     nokogiri (1.18.8-arm64-darwin)
       racc (~> 1.4)
     open-uri (0.1.0)
     paint (2.3.0)
     racc (1.8.1)
+    rexml (3.4.1)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -23,6 +26,13 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
+    rubyzip (2.4.1)
+    selenium-webdriver (4.31.0)
+      base64 (~> 0.2)
+      logger (~> 1.4)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
     table_tennis (0.0.3)
       csv (~> 3.3)
       ffi (~> 1.17)
@@ -32,6 +42,7 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
+    websocket (1.2.11)
 
 PLATFORMS
   arm64-darwin-21
@@ -41,6 +52,7 @@ DEPENDENCIES
   nokogiri
   open-uri
   rspec
+  selenium-webdriver
   table_tennis
 
 RUBY VERSION
