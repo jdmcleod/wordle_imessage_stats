@@ -6,6 +6,7 @@ require_relative 'wordle_average_web_scraper'
 require_relative 'most_impressive_guess'
 require_relative 'wordle_history_updater'
 require_relative 'wordle_statistic'
+require_relative 'luckiest_guess'
 
 class WordleStats
   attr_reader :wordles, :grouped_wordles, :total
@@ -55,7 +56,7 @@ class WordleStats
         average_score: calculate_average_score(wordles),
         date: wordles.first.date,
         wordle_number: wordles.first.wordle_number,
-        luckiest_guesser: wordles.max_by(&:first_guess_luck).person,
+        luckiest_guesser: LuckiestGuess.new(wordles).calculate,
         most_impressive_guesser: MostImpressiveGuess.new(wordles).calculate
       )
     end
