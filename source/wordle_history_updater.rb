@@ -6,7 +6,7 @@ class WordleHistoryUpdater
   URL = 'https://wordfinder.yourdictionary.com/wordle/answers/'
 
   def update
-    first_line = CSV.read('history.csv').first
+    first_line = CSV.read('data/history.csv').first
     return if first_line && Date.parse(first_line[0]) == Date.today
 
     doc = fetch_document
@@ -44,7 +44,7 @@ class WordleHistoryUpdater
   end
 
   def save_to_csv(words)
-    CSV.open('history.csv', 'w') do |csv|
+    CSV.open('data/history.csv', 'w') do |csv|
       words.each_with_index do |wordle_data, index|
         date = Date.today - index
         csv << [date.strftime('%Y-%m-%d'), wordle_data[2], wordle_data.last.upcase]

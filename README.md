@@ -2,60 +2,93 @@
 
 If you have an imessage chat where you post wordles, this will give you epic stats.
 
-Currently the two available scripts are:
-- `stats.rb` - Gives you stats for each person in the chat
-- `word_difficulty.rb` - Gives you stats for how hard each word in the chat was
+How cool would it be to have a message like this posted to your chat every day AUTOMATICALLY?
+
+```
+⏰ Today's Wordle (1408, WEEDY) was harder than 99% of all 138 chat Wordles
+🎯Chat averaged 4.86 (NYT average of 4.5)
+🟩🟩🟩🟩⬜ 7/8 attempts
+🔥Most impressive guess was from Simba
+👏Luckiest first guess was Bentley
+```
+
+Well, this explains how to do that. It would be good if you knew some ruby and basic mac terminal commands.
 
 ## Setup (for mac)
 
-1. Clone this repository or download the script
-2. Make the script executable:
+1. Clone this repository
+
+2. Install dependencies:
    ```bash
-   chmod +x export_chat_history.sh
+   bundle install
    ```
 
-3. Run the script:
+3. Make two scripts executable:
    ```bash
-   ./export_chat_history.sh
+   chmod +x scripts/export_chat_history.sh
    ```
-The script will:
-   - Check if `imessage-exporter` is installed and install it if needed
-   - Export your iMessages to a temporary directory
-   - Display a numbered list of all available chat files
-Select a chat:
-   - You'll see a numbered list of all available chat files
-   - Enter the number corresponding to the chat you want to use
-   - The script will validate your selection
-Results:
-   - The selected chat will be copied to `chat.txt` in your current directory
-   - All temporary files will be automatically cleaned up
-Next steps:
-   - Create a `contacts.json` file if you haven't already
-   - The `chat.txt` file is ready for further processing
+   
+   ```bash
+   chmod +x scripts/send_message.sh
+   ```
 
-## Note
+4. Make sure you have the necessary permissions enabled for your terminal app. On recent macOS versions, you may need to grant Terminal full disk access in System Preferences > Security & Privacy > Privacy > Full Disk Access.
 
-Make sure you have the necessary permissions to access your iMessage data. On recent macOS versions, you may need to grant Terminal full disk access in System Preferences > Security & Privacy > Privacy > Full Disk Access.
+5. Get your iMessage chat ID by running this applescript inside the Script Editor program. You may need to do some trial and error to determine if you have the correct chat ID, but it will be the one with the correct phone numbers.
 
-4. Create a file called contacts.json in the root of this directory and add contacts to it in the format:
-```json
-{
-  "Me": "My Name",
-  "1111111111": "Somebody with this number",
-  "test@test.com": "Somebody with an email"
-}
+```
+tell application "Messages"
+	set allChats to chats
+	repeat with c in allChats
+		log "======================="
+		log "Chat ID: " & id of c
+		try
+			repeat with p in participants of c
+				log "Participant: " & handle of p
+			end repeat
+		on error errMsg
+			log "Error getting participants: " & errMsg
+		end try
+	end repeat
+end tell
 ```
 
-5. cd into the project directory
-6. run `ruby stats.rb` or `ruby word_difficulty.rb`
+6. Create a `.env` file in the root of this directory and add the following data: 
 
-Stats output: 
-![CleanShot 2025-04-24 at 13 43 22@2x](https://github.com/user-attachments/assets/8249a5ed-4dbd-4715-8099-fbc2ea4f3de8)
+```
+CHAT_ID="paste iMessage chat id"
+CHAT_NAME="Your iMessage chat name"
+CONTACTS='{
+  "Me": "Your name",
+  "10000000" :"Your friend's name",
+  "otherfriend@test.com": "Your other friend's name"}'
+}'
+```
 
+7. To pull your chat data, run `scripts/pull_chat.sh`
 
-Word difficulty output: 
+## Boom. Now you are set up and ready to roll. 
 
-![CleanShot 2025-04-24 at 13 49 43@2x](https://github.com/user-attachments/assets/c6cfc0e7-f46f-482f-a609-8603fae8f142)
+Here are the scripts you can run:
 
+1. `scripts/stats.rb`
+This will generate a table of wordle stats by player for the entire history of the chat. 
+   
+2. `scripts/today.rb`
+Pull Today's Wordle and display stats for it.
 
-Now add whatever epic stats you want!
+3. `scripts/yesterday.rb`
+Pull Yesterday's Wordle and display stats for it.
+
+4. `scripts/send_message.rb`
+This will send a message to your iMessage chat with the wordle stats for the day. You can configure it to run automatically by adding it to your crontab.
+
+Open cron tab editor:
+```bash
+crontab -e
+```
+
+Add the following line to to run the script every day at 7am:
+```bash
+0 7 * * * /Users/youraccount/Workspace/path/to/scripts/send_message.sh
+```

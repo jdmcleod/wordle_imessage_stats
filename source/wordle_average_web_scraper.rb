@@ -1,9 +1,14 @@
 require 'selenium-webdriver'
+require 'json'
 
 class WordleAverageWebScraper
   URL = 'https://engaging-data.com/pages/scripts/wordlebot/wordlegraph4.html'
+  CACHE_FILE = 'data/wordle_averages_cache.json'
 
   def parse(wordle_number)
+    cached_result = read_cache[wordle_number.to_s]
+    return cached_result if cached_result
+
     driver = setup_driver
     begin
       driver.get(URL)
@@ -11,7 +16,9 @@ class WordleAverageWebScraper
       select_element = wait.until { driver.find_element(id: 'wordlenum') }
       select_element.find_element(css: "option[value='#{wordle_number}']").click
       avg_element = wait.until { driver.find_element(id: 'avg') }
-      avg_element.text.to_f
+      result = avg_element.text.to_f
+      update_cache(wordle_number, result)
+      result
     rescue Selenium::WebDriver::Error::TimeoutError
       puts "Timeout waiting for element with id 'avg'"
       nil
@@ -24,6 +31,19 @@ class WordleAverageWebScraper
   end
 
   private
+
+  def read_cache
+    return {} unless File.exist?(CACHE_FILE)
+    JSON.parse(File.read(CACHE_FILE))
+  rescue JSON::ParserError
+    {}
+  end
+
+  def update_cache(wordle_number, result)
+    cache = read_cache
+    cache[wordle_number.to_s] = result
+    File.write(CACHE_FILE, JSON.generate(cache))
+  end
 
   def setup_driver
     options = Selenium::WebDriver::Chrome::Options.new

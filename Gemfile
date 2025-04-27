@@ -5,6 +5,7 @@ gem 'nokogiri'
 gem 'open-uri'
 gem 'table_tennis'
 gem 'selenium-webdriver'
+gem 'dotenv'
 
 group :development, :test do
   gem 'rspec'

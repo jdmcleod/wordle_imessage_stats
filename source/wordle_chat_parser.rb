@@ -6,7 +6,7 @@ class WordleChatParser
   REGEXP = /^Wordle \d+/
 
   def parse
-    chat = File.read('chat.txt')
+    chat = File.read('data/chat.txt')
     wordle_summaries = []
 
     lines = chat.split("\n")

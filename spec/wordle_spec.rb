@@ -1,6 +1,6 @@
 
-require_relative '../wordle'
-require_relative '../guess'
+require_relative '../source/wordle'
+require_relative '../source/guess'
 
 RSpec.describe Wordle do
   describe '#green_errors' do

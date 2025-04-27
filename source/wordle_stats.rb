@@ -22,24 +22,28 @@ class WordleStats
     display_impressive_guessers
   end
 
-  def recent
-    @recent ||= grouped_wordles.last
+  def today_wordle
+    @today_wordle ||= grouped_wordles.last
   end
 
-  def recent_index
+  def yesterday_wordle
+    @yesterday_wordle ||= grouped_wordles[-2]
+  end
+
+  def yesterday_wordle_index
     sorted_wordles.index { _1.wordle_number == recent.wordle_number }
   end
 
-  def recent_difficulty_percentile
-    ((recent_index.to_f / total.to_f) * 100.0).round
-  end
-
-  def worldwide_average
-    WordleAverageWebScraper.new.parse(recent.wordle_number)
+  def yesterday_wordle_difficulty_percentile
+    ((yesterday_wordle_index.to_f / total.to_f) * 100.0).round
   end
 
   def sorted_wordles
     grouped_wordles.sort_by(&:answer)
+  end
+
+  def number_of_players
+    @number_of_players ||= wordles.map(&:person).uniq.count
   end
 
   private
@@ -78,6 +82,6 @@ class WordleStats
     grouped_wordles
       .group_by(&:most_impressive_guesser)
       .sort_by { |_, wordles| wordles.count }
-      .each { |guesser, wordles| puts "#{guesser} (#{wordles.count})" }
+      .each { |guesser, wordles| puts "#{guesser.join(', ')} (#{wordles.count})" }
   end
 end

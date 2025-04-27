@@ -1,17 +1,12 @@
 # frozen_string_literal: true
 
 require 'table_tennis'
-require_relative 'person_stats'
-require_relative 'wordle_chat_parser'
+require_relative '../source/person_stats'
+require_relative '../source/wordle_chat_parser'
 
 worldes = WordleChatParser.new.parse
 
 grouped = worldes.group_by(&:person)
-
-# grouped.each do |person, wordles|
-#   stats = PersonStats.new(person, wordles)
-#   stats.print_calculation
-# end
 
 stats = grouped.map do |person, wordles|
   stats = PersonStats.new(person, wordles)

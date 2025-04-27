@@ -39,7 +39,7 @@ class HistoryManager
   def load_history
     @@data = {}
 
-    CSV.foreach(File.join(File.dirname(__FILE__), 'history.csv')) do |row|
+    CSV.foreach(File.join('data/history.csv')) do |row|
       date, number, answer = row
       @@data[number] = {
         date: date,

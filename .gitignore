@@ -1,3 +1,3 @@
-chat.txt
-contacts.json
+data/
 spec/examples.txt
+.env
