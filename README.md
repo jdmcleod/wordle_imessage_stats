@@ -34,7 +34,7 @@ Well, this explains how to do that. It would be good if you knew some ruby and b
 
 4. Make sure you have the necessary permissions enabled for your terminal app. On recent macOS versions, you may need to grant Terminal full disk access in System Preferences > Security & Privacy > Privacy > Full Disk Access.
 
-5. Get your iMessage chat ID by running this applescript inside the Script Editor program. You may need to do some trial and error to determine if you have the correct chat ID, but it will be the one with the correct phone numbers.
+5. Get your iMessage chat ID by running this applescript inside the Script Editor program. You may need to do some trial and error to determine if you have the correct chat ID, but it will be the one with the correct phone numbers. When you copy the chat id, make sure you remove the `*` at the end.
 
 ```
 tell application "Messages"
@@ -71,21 +71,24 @@ CONTACTS='{
 
 Here are the scripts you can run:
 
-1. `scripts/stats.rb`
+1. Run `ruby scripts/stats.rb`
 This will generate a table of wordle stats by player for the entire history of the chat. 
    ![CleanShot 2025-04-27 at 21 24 41@2x](https://github.com/user-attachments/assets/08e7c40a-fa6c-43e4-8834-38f35293d022)
 
-2. `scripts/today.rb`
+2. Run `ruby scripts/today.rb`
 Pull Today's Wordle and display stats for it.
 
-3. `scripts/yesterday.rb`
+3. Run `ruby scripts/yesterday.rb`
 Pull Yesterday's Wordle and display stats for it.
 
-4`scripts/word_difficulty.rb`
+4. Run `ruby scripts/word_difficulty.rb`
 Outputs all the words in the chat and their difficulty. Also outputs the most impressive guessers.
 
-5`scripts/send_message.rb`
-This will send a message to your iMessage chat with the wordle stats for the day. You can configure it to run automatically by adding it to your crontab.
+5. Run `ruby scripts/word_difficulty.rb`
+Outputs all the words in the chat and their difficulty. Also outputs the most impressive guessers.
+
+6. Run `scripts/send_message.sh`
+This will send a message to your iMessage chat with the wordle stats for yesterday. You can configure it to run automatically by adding it to your crontab.
 
 Open cron tab editor:
 ```bash
@@ -94,7 +97,7 @@ crontab -e
 
 Add the following line to to run the script every day at 7am:
 ```bash
-0 7 * * * /Users/youraccount/Workspace/path/to/scripts/send_message.sh
+0 7 * * * /Users/youraccount/path/to/scripts/send_message.sh
 ```
 
 Feel free to customize the script to your liking and add any stats. 
