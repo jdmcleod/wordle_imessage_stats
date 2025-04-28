@@ -25,7 +25,7 @@ Well, this explains how to do that. It would be good if you knew some ruby and b
 
 3. Make two scripts executable:
    ```bash
-   chmod +x scripts/export_chat_history.sh
+   chmod +x scripts/pull_chat.sh
    ```
    
    ```bash
@@ -73,7 +73,8 @@ Here are the scripts you can run:
 
 1. `scripts/stats.rb`
 This will generate a table of wordle stats by player for the entire history of the chat. 
-   
+   ![CleanShot 2025-04-27 at 21 24 41@2x](https://github.com/user-attachments/assets/08e7c40a-fa6c-43e4-8834-38f35293d022)
+
 2. `scripts/today.rb`
 Pull Today's Wordle and display stats for it.
 
