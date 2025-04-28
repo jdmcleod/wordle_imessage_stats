@@ -5,11 +5,11 @@ If you have an imessage chat where you post wordles, this will give you epic sta
 How cool would it be to have a message like this posted to your chat every day AUTOMATICALLY?
 
 ```
-⏰ Today's Wordle (1408, WEEDY) was harder than 99% of all 138 chat Wordles
-🎯Chat averaged 4.86 (NYT average of 4.5)
+⏰ Today's Wordle (1408, WEEDY) was harder than 93% of all 138 chat Wordles
+🎯 Chat averaged 4.86 (NYT average of 4.5)
 🟩🟩🟩🟩⬜ 7/8 attempts
-🔥Most impressive guess was from Simba
-👏Luckiest first guess was Bentley
+🔥 Most impressive guess was from Simba
+👏 Luckiest first guess was Bentley
 ```
 
 Well, this explains how to do that. It would be good if you knew some ruby and basic mac terminal commands.
@@ -80,7 +80,10 @@ Pull Today's Wordle and display stats for it.
 3. `scripts/yesterday.rb`
 Pull Yesterday's Wordle and display stats for it.
 
-4. `scripts/send_message.rb`
+4`scripts/word_difficulty.rb`
+Outputs all the words in the chat and their difficulty. Also outputs the most impressive guessers.
+
+5`scripts/send_message.rb`
 This will send a message to your iMessage chat with the wordle stats for the day. You can configure it to run automatically by adding it to your crontab.
 
 Open cron tab editor:
@@ -92,3 +95,7 @@ Add the following line to to run the script every day at 7am:
 ```bash
 0 7 * * * /Users/youraccount/Workspace/path/to/scripts/send_message.sh
 ```
+
+Feel free to customize the script to your liking and add any stats. 
+
+Now, you can feel better about yourself when a word is really difficult. 

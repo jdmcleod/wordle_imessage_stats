@@ -13,4 +13,3 @@ elsif stats.today_wordle.date.day == yesterday.day
 else
   puts "\nYesterday's wordle hasn't been posted yet. You may need to run scripts/pull_chat.sh\n"
 end
-

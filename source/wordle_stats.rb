@@ -39,7 +39,7 @@ class WordleStats
   end
 
   def sorted_wordles
-    grouped_wordles.sort_by(&:answer)
+    grouped_wordles.sort_by(&:average_score)
   end
 
   def number_of_players

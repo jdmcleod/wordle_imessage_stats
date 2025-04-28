@@ -37,8 +37,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Available chat files:"
-find "$temp_dir" -name "*.txt" | nl
+# uncomment this to debug
+#echo "Available chat files:"
+#find "$temp_dir" -name "*.txt" | nl
 
 # Read chat name from file
 echo "Searching for '$CHAT_NAME' chat..."

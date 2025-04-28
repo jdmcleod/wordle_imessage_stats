@@ -3,7 +3,9 @@
 # Load environment variables from .env file
 if [ -f .env ]; then
     echo "[INFO] Loading environment variables..."
-    export $(cat .env | xargs)
+    set -a
+    source .env
+    set +a
 else
     echo "[ERROR] .env file not found!"
     exit 1
@@ -19,6 +21,8 @@ echo "Pulling chat"
 scripts/pull_chat.sh
 
 MESSAGE=$(ruby scripts/yesterday.rb)
+
+echo $MESSAGE
 
 osascript <<END
 tell application "Messages"
