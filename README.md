@@ -84,21 +84,27 @@ Pull Yesterday's Wordle and display stats for it.
 4. Run `ruby scripts/word_difficulty.rb`
 Outputs all the words in the chat and their difficulty. Also outputs the most impressive guessers.
 
-5. Run `ruby scripts/word_difficulty.rb`
-Outputs all the words in the chat and their difficulty. Also outputs the most impressive guessers.
-
 6. Run `scripts/send_message.sh`
-This will send a message to your iMessage chat with the wordle stats for yesterday. You can configure it to run automatically by adding it to your crontab.
-
-Open cron tab editor:
+This will send a message to your iMessage chat with the wordle stats for yesterday. You can even hook it up to a mac shortcut. Choose the "Run Shell Script" action and paste the following:
 ```bash
-crontab -e
+~/myuser/path/to/wordle_chat_stats/bin/send_message_shortcut_script.sh
 ```
 
-Add the following line to to run the script every day at 7am:
+Now add the file `bin/send_message_shortcut_script.sh` with the following contents:
 ```bash
-0 7 * * * /Users/youraccount/path/to/scripts/send_message.sh
+#!/bin/zsh
+source ~/.zshrc
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+cd ~/path/to/wordle_chat_stats || exit 1
+
+./scripts/send_message.sh
 ```
+
+Now you can post yesterday's stats to your chat with the click of a button!
 
 Feel free to customize the script to your liking and add any stats. 
 

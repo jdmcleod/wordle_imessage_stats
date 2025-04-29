@@ -1,3 +1,4 @@
 data/
 spec/examples.txt
 .env
+bin/

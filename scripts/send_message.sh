@@ -1,4 +1,6 @@
 #!/bin/bash
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # Load environment variables from .env file
 if [ -f .env ]; then
@@ -22,6 +24,11 @@ scripts/pull_chat.sh
 
 MESSAGE=$(ruby scripts/yesterday.rb)
 
+# uncomment for debugging
+#ruby scripts/yesterday.rb > /tmp/ruby_stdout.txt 2> /tmp/ruby_stderr.txt
+#MESSAGE=$(< /tmp/ruby_stdout.txt)
+
+echo "Sending message"
 echo $MESSAGE
 
 osascript <<END
