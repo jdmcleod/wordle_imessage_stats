@@ -67,6 +67,8 @@ class WordleStats
   end
 
   def calculate_average_score(wordles)
+    return 0 if wordles.empty?
+
     (wordles.sum(&:score_for_average) / wordles.count.to_f).round(2)
   end
 

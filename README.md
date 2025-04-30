@@ -104,6 +104,8 @@ cd ~/path/to/wordle_chat_stats || exit 1
 ./scripts/send_message.sh
 ```
 
+You will need to grant full disc access to the Shortcuts app.
+
 Now you can post yesterday's stats to your chat with the click of a button!
 
 Feel free to customize the script to your liking and add any stats. 
