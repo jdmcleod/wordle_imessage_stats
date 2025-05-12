@@ -6,7 +6,9 @@ require_relative '../source/wordle_chat_parser'
 
 worldes = WordleChatParser.new.parse
 
-grouped = worldes.group_by(&:person)
+grouped = worldes
+  # .reject { it.date < Date.new(2025, 4, 11) }
+  .group_by(&:person)
 
 stats = grouped.map do |person, wordles|
   stats = PersonStats.new(person, wordles)
@@ -14,7 +16,7 @@ stats = grouped.map do |person, wordles|
 end.sort_by { _1[:avg] }
 
 options = {
-  color_scales: { avg: :gyr, two: :b, gFirst: :g, nYel: :b, blank: :y, errors: :r },
+  color_scales: { avg: :gyr, two: :b, threes: :b, gFirst: :g, nYel: :b, blank: :y, errors: :r },
   color: true,
   columns: stats.first.keys,
   title: 'Wordle Stats',

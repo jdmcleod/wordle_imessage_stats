@@ -14,12 +14,7 @@ class WeeklyStats
 
   def top_impressive_guessers
     last_seven_days_wordles = wordles_within_last_seven_days
-
-    top_guesser = last_seven_days_wordles
-                  .group_by(&:most_impressive_guesser)
-                  .max_by { |_, wordles| wordles.count }
-
-    top_guesser
+    last_seven_days_wordles.group_by(&:most_impressive_guesser).max_by { _2.count }
   end
 
   def print_top_impressive_guessers
@@ -44,13 +39,27 @@ class WeeklyStats
     eligible_players.min_by { |stat| stat[:average_score] }
   end
 
+
+
   def print_lowest_average_player
     result = lowest_average_in_last_seven
+    print_wordle_scores
 
     if result
       puts "\nPlayer with the lowest average score in their last 7 Wordles: #{result[:person]} (Average Score: #{result[:average_score]})"
     else
       puts "\nNot enough players with at least 7 recent Wordles to calculate lowest average scores."
+    end
+  end
+
+  def print_wordle_scores
+    puts "\nWordle Scores for Last 7 Days:"
+    wordles_within_last_seven_days.each do |wordle|
+      puts "Date: #{wordle.date}, Word: #{wordle.answer}"
+      @wordles.select { |w| w.wordle_number == wordle.wordle_number }
+              .each { |w| puts "  #{w.person}: #{w.score}" }
+      puts "  Average Score: #{wordle.average_score}"
+      puts
     end
   end
 

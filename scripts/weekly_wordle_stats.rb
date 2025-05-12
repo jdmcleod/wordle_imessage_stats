@@ -12,3 +12,4 @@ weekly_stats = WeeklyStats.new(stats)
 # Print the top impressive guessers for the last 7 days
 weekly_stats.print_lowest_average_player
 weekly_stats.print_top_impressive_guessers
+weekly_stats.print_wordle_scores
