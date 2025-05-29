@@ -7,7 +7,7 @@ require_relative '../source/wordle_chat_parser'
 worldes = WordleChatParser.new.parse
 
 grouped = worldes
-  # .reject { it.date < Date.new(2025, 4, 11) }
+  .reject { it.date < Date.new(2025, 4, 11) }
   .group_by(&:person)
 
 stats = grouped.map do |person, wordles|
