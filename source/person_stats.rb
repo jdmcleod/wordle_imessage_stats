@@ -1,9 +1,10 @@
 class PersonStats
-  attr_reader :person, :wordles
+  attr_reader :person, :wordles, :all_wordles
 
-  def initialize(person, wordles)
+  def initialize(person, wordles, all_worldes)
     @person = person
     @wordles = wordles
+    @all_wordles = all_worldes
   end
 
   def print_calculate
@@ -26,18 +27,25 @@ class PersonStats
       name: person,
       total: wordles.count,
       avg: average,
-      # one: wordles.count { |w| w.score == 1 },
-      two: wordles.count { |w| w.score == 2 },
-      threes: wordles.count { |w| w.score == 3 },
-      lost: wordles.count(&:lost?),
+      # one: wordles.count { it.score == 1 },
+      '2': wordles.count { it.score == 2 },
+      '3': wordles.count { it.score == 3 },
+      '4': wordles.count { it.score == 4 },
+      '5': wordles.count { it.score == 5 },
+      '6': wordles.count { it.score == 6 },
+      'X': wordles.count(&:lost?),
+      best_guess: impressive_guesses,
       gFirst: greens_on_first_guess,
-      nYel: no_yellows,
+      # nYel: no_yellows,
       blank: blank_first_guesses,
       errors: errors,
       avgTime: average_time,
     }
   end
 
+  def impressive_guesses
+    WordleStats.new(all_wordles).impressive_guesses_for(person)
+  end
 
   def print_scores
     print 'Scores:'
@@ -84,6 +92,8 @@ class PersonStats
     percent_through_hour = ((decimal / 100.to_f) * 60).round
     hour = 12 if hour == 0
     hour = hour % 12 if hour > 12
+    percent_through_hour = percent_through_hour.to_s.prepend('1') if percent_through_hour.digits.count == 1
+
     "#{hour}:#{percent_through_hour} #{meridian}"
   end
 

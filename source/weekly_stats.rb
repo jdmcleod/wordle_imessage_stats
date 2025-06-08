@@ -3,7 +3,7 @@ require 'date'
 class WeeklyStats
   def initialize(wordle_stats)
     @wordles = wordle_stats.wordles
-    @grouped_wordles = wordle_stats.grouped_wordles
+    @grouped_wordles = wordle_stats.stats
   end
 
   def wordles_within_last_seven_days
@@ -21,7 +21,7 @@ class WeeklyStats
     top_guesser = top_impressive_guessers
 
     if top_guesser
-      puts "\nPlayer(s) with the most impressive guesses in the last 7 days: #{top_guesser[0].join(', ')} (#{top_guesser[1].count} times)"
+      puts "\nPlayer(s) with the most impressive guesses in the last 7 days: #{[*top_guesser[0]].join(', ')} (#{top_guesser[1].count} times)"
     else
       puts "\nNo data available for impressive guesses in the last 7 days."
     end
@@ -38,8 +38,6 @@ class WeeklyStats
     eligible_players = person_stats.select { |stat| stat[:wordles_count] == 7 }
     eligible_players.min_by { |stat| stat[:average_score] }
   end
-
-
 
   def print_lowest_average_player
     result = lowest_average_in_last_seven

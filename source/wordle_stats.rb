@@ -9,12 +9,13 @@ require_relative 'wordle_statistic'
 require_relative 'luckiest_guess'
 
 class WordleStats
-  attr_reader :wordles, :grouped_wordles, :total
+  attr_reader :wordles, :stats, :total
 
-  def initialize
+  def initialize(wordles_override=nil)
+    @wordles_override = wordles_override
     @wordles = fetch_wordles
-    @grouped_wordles = calculate_word_statistics
-    @total = @grouped_wordles.count
+    @stats = calculate_word_statistics
+    @total = @stats.count
   end
 
   def display_statistics
@@ -23,11 +24,11 @@ class WordleStats
   end
 
   def today_wordle
-    @today_wordle ||= grouped_wordles.last
+    @today_wordle ||= stats.last
   end
 
   def yesterday_wordle
-    @yesterday_wordle ||= grouped_wordles[-2]
+    @yesterday_wordle ||= stats[-2]
   end
 
   def yesterday_wordle_index
@@ -39,11 +40,25 @@ class WordleStats
   end
 
   def sorted_wordles
-    grouped_wordles.sort_by(&:average_score)
+    stats.sort_by(&:average_score)
   end
 
   def number_of_players
     @number_of_players ||= wordles.map(&:person).uniq.count
+  end
+
+  def impressive_guessers
+    stats
+      .group_by { _1.most_impressive_guesser }
+      .sort_by { |_, wordles| wordles.count }
+  end
+
+  def impressive_guesses_for(person)
+    stats.count { it.most_impressive_guesser.include?(person) }
+  end
+
+  def wordles
+    @wordles_override || @wordles
   end
 
   private
@@ -54,14 +69,14 @@ class WordleStats
   end
 
   def calculate_word_statistics
-    @wordles.group_by(&:answer).map do |answer, wordles|
+    wordles.group_by(&:answer).map do |answer, wordles|
       WordleStatistic.new(
         answer: answer,
         average_score: calculate_average_score(wordles),
         date: wordles.first.date,
         wordle_number: wordles.first.wordle_number,
         luckiest_guesser: LuckiestGuess.new(wordles).calculate,
-        most_impressive_guesser: MostImpressiveGuess.new(wordles).calculate
+        most_impressive_guess: MostImpressiveGuess.new(wordles).calculate
       )
     end
   end
@@ -73,7 +88,7 @@ class WordleStats
   end
 
   def display_word_rankings
-    sorted_stats = grouped_wordles.sort_by(&:average_score)
+    sorted_stats = stats.sort_by(&:average_score)
     sorted_stats.each.with_index do |stat, index|
       puts "#{total - index}. #{stat}"
     end
@@ -81,9 +96,6 @@ class WordleStats
 
   def display_impressive_guessers
     puts "\nMost impressive guessers"
-    grouped_wordles
-      .group_by(&:most_impressive_guesser)
-      .sort_by { |_, wordles| wordles.count }
-      .each { |guesser, wordles| puts "#{guesser.join(', ')} (#{wordles.count})" }
+    impressive_guessers.each { |guesser, wordles| puts "#{guesser} (#{wordles.count})" }
   end
 end

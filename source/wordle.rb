@@ -17,6 +17,17 @@ class Wordle
     @guesses ||= data.split("\n").map(&:strip).map { Guess.new(_1) }
   end
 
+  def to_player_string_with_score
+    "#{person} (#{score})"
+  end
+
+  def to_player_string_with_luck
+    parts = []
+    parts << "#{greens_on_first_guess}G" if greens_on_first_guess > 0
+    parts << "#{yellows_on_first_guess}Y" if yellows_on_first_guess > 0
+    "#{person} (#{parts.join(', ')})"
+  end
+
   def score_for_average
     return 7 if lost?
 
@@ -37,6 +48,10 @@ class Wordle
 
   def greens_on_first_guess
     guesses.first.greens
+  end
+
+  def yellows_on_first_guess
+    guesses.first.yellows
   end
 
   def lost?

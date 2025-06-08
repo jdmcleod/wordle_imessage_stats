@@ -1,5 +1,8 @@
 require 'json'
-require 'dotenv/load'
+
+if ENV['CONTACTS'].nil?
+  require 'dotenv/load'
+end
 
 class Contact
   def self.name_for(number)

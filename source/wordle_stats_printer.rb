@@ -10,7 +10,7 @@ class WordleStatsPrinter
     puts "⏰ #{relative_date}'s Wordle (#{wordle.wordle_number}, #{wordle.answer}) was harder than #{difficulty_percentile}% of all #{stats.total} chat Wordles"
     puts "🎯Chat averaged #{wordle.average_score} (NYT average of #{worldwide_average})"
     puts attempts
-    puts "🔥Most impressive guess was from #{wordle.most_impressive_guessers}"
+    puts "🔥Most impressive guess was from #{wordle.most_impressive_guess.map(&:to_player_string_with_score).join(' and ')}"
     puts "👏Luckiest first guess was #{wordle.luckiest_guessers}"
   end
 
