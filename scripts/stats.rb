@@ -23,6 +23,7 @@ def print_from_date(cutoff_date = Date.today - 1000, table_name = 'Wordle Stats'
   options = {
     color_scales: {
       avg: :gyr,
+      '1': :b,
       '2': :b,
       '3': :b,
       '4': :b,

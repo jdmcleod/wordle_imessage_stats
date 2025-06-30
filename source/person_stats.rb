@@ -27,7 +27,7 @@ class PersonStats
       name: person,
       total: wordles.count,
       avg: average,
-      # one: wordles.count { it.score == 1 },
+      '1': wordles.count { it.score == 1 },
       '2': wordles.count { it.score == 2 },
       '3': wordles.count { it.score == 3 },
       '4': wordles.count { it.score == 4 },

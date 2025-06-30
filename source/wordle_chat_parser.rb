@@ -12,7 +12,7 @@ class WordleChatParser
     lines = chat.split("\n")
 
     lines.each.with_index do |line, index|
-      wordle_summaries << parse_line(index, lines) if line.match?(REGEXP)
+      wordle_summaries << parse_line(index, lines) if line.match?(REGEXP) && !lines[index - 1].match(/This message was deleted/)
     end
 
     wordle_summaries
