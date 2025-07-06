@@ -44,7 +44,11 @@ class PersonStats
   end
 
   def impressive_guesses
-    WordleStats.new(all_wordles).impressive_guesses_for(person)
+    wordle_stats.impressive_guesses_for(person)
+  end
+
+  def wordle_stats
+    @wordle_stats ||= WordleStats.new(all_wordles)
   end
 
   def print_scores
@@ -57,7 +61,16 @@ class PersonStats
   end
 
   def average
-    calc_average(wordles.sum(&:score_for_average), wordles.count)
+    missing_wordle_numbers = all_wordles.map(&:wordle_number).uniq - wordles.map(&:wordle_number)
+
+    averages_for_missing = missing_wordle_numbers.sum do |wordle_number|
+      wordle_stats.calculate_average_score all_wordles.select { it.wordle_number == wordle_number }
+    end
+
+    total = wordles.sum(&:score_for_average) + averages_for_missing
+    total_count = wordles.count + missing_wordle_numbers.count
+
+    calc_average(total, total_count)
   end
 
   def print_average

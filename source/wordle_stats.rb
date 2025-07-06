@@ -61,6 +61,12 @@ class WordleStats
     @wordles_override || @wordles
   end
 
+  def calculate_average_score(wordles)
+    return 0 if wordles.empty?
+
+    (wordles.sum(&:score_for_average) / wordles.count.to_f).round(2)
+  end
+
   private
 
   def fetch_wordles
@@ -79,12 +85,6 @@ class WordleStats
         most_impressive_guess: MostImpressiveGuess.new(wordles).calculate
       )
     end
-  end
-
-  def calculate_average_score(wordles)
-    return 0 if wordles.empty?
-
-    (wordles.sum(&:score_for_average) / wordles.count.to_f).round(2)
   end
 
   def display_word_rankings
