@@ -5,6 +5,9 @@ require_relative '../source/wordle_stats_printer'
 
 stats = WordleStats.new
 yesterday = Date.today - 1
+two_days_ago = Date.today - 2
+
+# WordleStatsPrinter.new(stats, stats.two_days_ago_wordle).print
 
 if stats.yesterday_wordle.date.day == yesterday.day
   WordleStatsPrinter.new(stats, stats.yesterday_wordle).print

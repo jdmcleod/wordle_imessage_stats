@@ -34,6 +34,10 @@ class Guess
     data.chars.all?('⬜') || data.chars.all?('⬛')
   end
 
+  def in_array
+    data.chars
+  end
+
   def luck
     (greens * 2) + yellows
   end

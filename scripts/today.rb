@@ -5,7 +5,6 @@ require_relative '../source/wordle_stats_printer'
 
 stats = WordleStats.new
 today_wordle = stats.today_wordle
-
 if today_wordle.date.day == Date.today.day
   WordleStatsPrinter.new(stats, today_wordle).print
 else

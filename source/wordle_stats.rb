@@ -20,7 +20,6 @@ class WordleStats
 
   def display_statistics
     display_word_rankings
-    display_impressive_guessers
   end
 
   def today_wordle
@@ -29,6 +28,10 @@ class WordleStats
 
   def yesterday_wordle
     @yesterday_wordle ||= stats[-2]
+  end
+
+  def two_days_ago_wordle
+    @two_days_ago_wordle ||= stats[-3]
   end
 
   def yesterday_wordle_index
@@ -92,10 +95,5 @@ class WordleStats
     sorted_stats.each.with_index do |stat, index|
       puts "#{total - index}. #{stat}"
     end
-  end
-
-  def display_impressive_guessers
-    puts "\nMost impressive guessers"
-    impressive_guessers.each { |guesser, wordles| puts "#{guesser} (#{wordles.count})" }
   end
 end

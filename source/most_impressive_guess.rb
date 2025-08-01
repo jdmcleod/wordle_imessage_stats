@@ -6,15 +6,10 @@ class MostImpressiveGuess
   def calculate
     winning_score = @wordles.min_by(&:score).score
     winners = @wordles.select { it.score == winning_score }
-
-    min_hints = winners.map do |wordle|
-      guesses = wordle.guesses[0...-1] # Exclude final correct guess
-      guesses.sum(&:weighted_hints)
-    end.min
+    min_information = winners.map(&:information_score).min
 
     winners.select do |wordle|
-      guesses = wordle.guesses[0...-1] # Exclude final correct guess
-      guesses.sum(&:weighted_hints) == min_hints
+      min_information == wordle.information_score
     end
   end
 end

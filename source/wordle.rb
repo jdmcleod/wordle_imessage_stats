@@ -8,7 +8,7 @@ class Wordle
 
   def initialize(person, wordle_number, date, data)
     @person = Contact.name_for person
-    @wordle_number = wordle_number
+    @wordle_number = wordle_number.to_i
     @date = date
     @data = data
   end
@@ -18,7 +18,8 @@ class Wordle
   end
 
   def to_player_string_with_score
-    "#{person} (#{score})"
+    percent_revealed = (information_score.to_f / 3 * 20).round(1)
+    "#{person} (in #{score} with #{percent_revealed}% information)"
   end
 
   def to_player_string_with_luck
@@ -93,5 +94,20 @@ class Wordle
       errors += (prev_greens - current_greens).size
     end
     errors
+  end
+
+  ##
+  # Greens count as 3 but only once per column and yellows count as 1
+  def information_score
+    relevant_guesses = guesses[0...-1] # Exclude the last and correct guess
+    combined_columns = relevant_guesses.map(&:in_array).transpose
+
+    score_for_each_column = combined_columns.map do |column|
+      next 3 if column.include?(Guess::GREEN)
+      next column.count(Guess::YELLOW) if column.include?(Guess::YELLOW) # multiple yellows in one column count as one each
+      0 # no greens or yellows
+    end
+
+    score_for_each_column.sum
   end
 end
