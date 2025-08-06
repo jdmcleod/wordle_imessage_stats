@@ -9,6 +9,8 @@ require_relative 'wordle_statistic'
 require_relative 'luckiest_guess'
 
 class WordleStats
+  NUMBER_OF_PLAYERS_WHO_LEFT_CHAT = 1 # David
+
   attr_reader :wordles, :stats, :total
 
   def initialize(wordles_override=nil)
@@ -47,7 +49,7 @@ class WordleStats
   end
 
   def number_of_players
-    @number_of_players ||= wordles.map(&:person).uniq.count
+    @number_of_players ||= (wordles.map(&:person).uniq.count - NUMBER_OF_PLAYERS_WHO_LEFT_CHAT)
   end
 
   def impressive_guessers

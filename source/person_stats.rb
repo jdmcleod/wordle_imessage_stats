@@ -37,7 +37,7 @@ class PersonStats
       best_guess: impressive_guesses,
       gFirst: greens_on_first_guess,
       # nYel: no_yellows,
-      blank: blank_first_guesses,
+      # blank: blank_first_guesses,
       errors: errors,
       avgTime: average_time,
     }

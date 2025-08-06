@@ -18,7 +18,7 @@ class Wordle
   end
 
   def to_player_string_with_score
-    percent_revealed = (information_score.to_f / 3 * 20).round(1)
+    percent_revealed = (information_score.to_f / 3 * 20).round
     "#{person} (in #{score} with #{percent_revealed}% information)"
   end
 
