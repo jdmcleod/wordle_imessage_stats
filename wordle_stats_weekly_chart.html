@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wordle Weekly Stats Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1em;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    h1 {
+      margin: 0 0 1em 0;
+      text-align: center;
+    }
+    #chart-container {
+      width: 100%;
+      height: calc(100vh - 80px);
+    }
+  </style>
+</head>
+<body>
+  <h1>Wordle Weekly Average Stats Chart</h1>
+  <div id="chart-container">
+    <canvas id="stats-chart"></canvas>
+  </div>
+  <script>
+    function parseStats(data) {
+      const allDates = new Set();
+      data.forEach(person => {
+        person.scores.forEach(s => {
+          const date = s.date.split('T')[0]; // Extract just the date part
+          allDates.add(date);
+        });
+      });
+      const sortedDates = Array.from(allDates).sort();
+
+      const colors = [
+        '#FF6B6B', '#a5ffb6', '#45B7D1', '#FECA57',
+        '#FF9FF3', '#54A0FF', '#5F27CD', '#FF9F43',
+        '#E84393', '#4f9d0d', '#b60000', '#220cab'
+      ];
+
+      const datasets = data.map((person, idx) => {
+        const color = colors[idx % colors.length];
+        const dateToScore = {};
+        person.scores.forEach(s => {
+          const date = s.date.split('T')[0];
+          dateToScore[date] = s.score;
+        });
+        return {
+          label: person.name,
+          data: sortedDates.map(date => dateToScore[date] ?? null),
+          borderColor: color,
+          backgroundColor: color,
+          spanGaps: true,
+          tension: 0.2
+        };
+      });
+      return { labels: sortedDates, datasets };
+    }
+
+    // Load weekly data and draw chart on page load
+    fetch('data/wordle_stats_weekly.json')
+      .then(response => response.json())
+      .then(data => {
+        const chartData = parseStats(data);
+        const chart = new Chart(document.getElementById('stats-chart').getContext('2d'), {
+          type: 'line',
+          data: chartData,
+          options: {
+            responsive: true,
+            plugins: {
+              title: { display: true, text: 'Wordle Weekly Average Scores' },
+              legend: {
+                display: true,
+                onClick: (e, legendItem) => {
+                  const index = legendItem.datasetIndex;
+                  const datasets = chart.data.datasets;
+
+                  // Toggle highlighting
+                  datasets.forEach((dataset, i) => {
+                    if (i === index) {
+                      // Highlight selected dataset
+                      dataset.borderWidth = 4;
+                      dataset.pointRadius = 6;
+                      dataset.backgroundColor = dataset.borderColor;
+                    } else {
+                      // Dim other datasets
+                      dataset.borderWidth = 1;
+                      dataset.pointRadius = 3;
+                      const color = dataset.borderColor;
+                      dataset.backgroundColor = color + '40'; // Add transparency
+                    }
+                  });
+
+                  chart.update();
+                }
+              }
+            },
+            scales: {
+              y: {
+                title: { display: true, text: 'Average Score' },
+                beginAtZero: true,
+                reverse: true,
+              },
+              x: { title: { display: true, text: 'Week Starting' } }
+            }
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Error loading wordle weekly stats:', error);
+        document.getElementById('chart-container').innerHTML = '<p>Error loading data. Make sure you are serving this file from a web server.</p>';
+      });
+  </script>
+</body>
+</html>
