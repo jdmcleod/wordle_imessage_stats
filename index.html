@@ -16,7 +16,7 @@
 
     body {
       font-family: 'Rubik', sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: #fafafa;
       min-height: 100vh;
       padding: 2em;
       color: #333;
@@ -36,16 +36,15 @@
     .header h1 {
       font-size: 3.5em;
       font-weight: 700;
-      color: white;
-      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      color: #212529;
       margin-bottom: 0.3em;
       letter-spacing: -0.02em;
     }
 
     .header p {
       font-size: 1.3em;
-      color: rgba(255,255,255,0.9);
-      font-weight: 300;
+      color: #6c757d;
+      font-weight: 400;
     }
 
     .chart-links {
@@ -56,16 +55,14 @@
     }
 
     .chart-card {
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
+      background: white;
       padding: 3em 2.5em;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      border: 2px solid #e9ecef;
       text-align: center;
       text-decoration: none;
       color: inherit;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
       animation: fadeInUp 0.8s ease-out;
@@ -75,24 +72,9 @@
       animation-delay: 0.2s;
     }
 
-    .chart-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .chart-card:hover::before {
-      left: 100%;
-    }
-
     .chart-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+      transform: translateY(-4px);
+      border-color: #6aaa64;
       text-decoration: none;
       color: inherit;
     }
@@ -101,40 +83,55 @@
       font-size: 3.5em;
       margin-bottom: 0.5em;
       display: block;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
     .chart-card h2 {
       font-size: 1.8em;
       font-weight: 600;
-      color: #2c3e50;
+      color: #212529;
       margin-bottom: 0.8em;
       position: relative;
     }
 
     .chart-card p {
       font-size: 1.1em;
-      color: #7f8c8d;
+      color: #6c757d;
       line-height: 1.6;
       font-weight: 400;
     }
 
     .daily-card {
-      background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+      border-color: #6aaa64;
     }
 
-    .daily-card h2,
-    .daily-card p {
-      color: white;
+    .daily-card:hover {
+      background: #f8fdf8;
+      border-color: #538d4e;
+    }
+
+    .daily-card .icon {
+      color: #6aaa64;
+    }
+
+    .daily-card h2 {
+      color: #538d4e;
     }
 
     .weekly-card {
-      background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+      border-color: #c9b458;
     }
 
-    .weekly-card h2,
-    .weekly-card p {
-      color: white;
+    .weekly-card:hover {
+      background: #fefdf6;
+      border-color: #b49c3e;
+    }
+
+    .weekly-card .icon {
+      color: #c9b458;
+    }
+
+    .weekly-card h2 {
+      color: #b49c3e;
     }
 
     @keyframes fadeInDown {
@@ -194,13 +191,13 @@
       <a href="wordle_stats_chart.html" class="chart-card daily-card">
         <span class="icon">📈</span>
         <h2>Daily Performance</h2>
-        <p>Track individual daily scores and see how each player performs over time with detailed day-by-day analysis</p>
+        <p>Scores over the last 30 days</p>
       </a>
 
       <a href="wordle_stats_weekly_chart.html" class="chart-card weekly-card">
         <span class="icon">📊</span>
         <h2>Weekly Trends</h2>
-        <p>Analyze weekly average scores to identify long-term patterns and improvements in your group's performance</p>
+        <p>Weekly averages for entire chat history</p>
       </a>
     </div>
   </div>
