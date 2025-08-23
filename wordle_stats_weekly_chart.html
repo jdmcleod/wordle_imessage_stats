@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wordle Stats Line Chart</title>
+  <title>Wordle Weekly Stats Chart</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
@@ -23,7 +23,7 @@
   </style>
 </head>
 <body>
-  <h1>Wordle Stats Line Chart</h1>
+  <h1>Wordle Weekly Average Stats Chart</h1>
   <div id="chart-container">
     <canvas id="stats-chart"></canvas>
   </div>
@@ -39,10 +39,9 @@
       const sortedDates = Array.from(allDates).sort();
 
       const colors = [
-        '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FECA57',
-        '#FF9FF3', '#54A0FF', '#5F27CD', '#00D2D3', '#FF9F43',
-        '#6C5CE7', '#A29BFE', '#FD79A8', '#FDCB6E', '#E17055',
-        '#74B9FF', '#81ECEC', '#55A3FF', '#00B894', '#E84393'
+        '#FF6B6B', '#a5ffb6', '#45B7D1', '#FECA57',
+        '#FF9FF3', '#54A0FF', '#5F27CD', '#FF9F43',
+        '#E84393', '#4f9d0d', '#b60000', '#220cab'
       ];
 
       const datasets = data.map((person, idx) => {
@@ -64,8 +63,8 @@
       return { labels: sortedDates, datasets };
     }
 
-    // Load data and draw chart on page load
-    fetch('data/wordle_stats.json')
+    // Load weekly data and draw chart on page load
+    fetch('data/wordle_stats_weekly.json')
       .then(response => response.json())
       .then(data => {
         const chartData = parseStats(data);
@@ -75,7 +74,7 @@
           options: {
             responsive: true,
             plugins: {
-              title: { display: true, text: 'Wordle Scores Per Day' },
+              title: { display: true, text: 'Wordle Weekly Average Scores' },
               legend: {
                 display: true,
                 onClick: (e, legendItem) => {
@@ -104,20 +103,17 @@
             },
             scales: {
               y: {
-                title: { display: true, text: 'Score' },
+                title: { display: true, text: 'Average Score' },
                 beginAtZero: true,
                 reverse: true,
-                ticks: {
-                  stepSize: 0.5
-                }
               },
-              x: { title: { display: true, text: 'Date' } }
+              x: { title: { display: true, text: 'Week Starting' } }
             }
           }
         });
       })
       .catch(error => {
-        console.error('Error loading wordle stats:', error);
+        console.error('Error loading wordle weekly stats:', error);
         document.getElementById('chart-container').innerHTML = '<p>Error loading data. Make sure you are serving this file from a web server.</p>';
       });
   </script>

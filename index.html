@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle Chat Stats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2em;
+      background-color: #f5f5f5;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 3em;
+    }
+    .chart-links {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .chart-card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      min-width: 250px;
+    }
+    .chart-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      text-decoration: none;
+      color: inherit;
+    }
+    .chart-card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .chart-card p {
+      color: #666;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Wordle Chat Stats Dashboard</h1>
+    <p>View your group's Wordle performance over time</p>
+  </div>
+
+  <div class="chart-links">
+    <a href="wordle_stats_chart.html" class="chart-card">
+      <h2>📊 Daily Stats</h2>
+      <p>View individual daily Wordle scores for each player over time</p>
+    </a>
+
+    <a href="wordle_stats_weekly_chart.html" class="chart-card">
+      <h2>📈 Weekly Averages</h2>
+      <p>View weekly average scores to see longer-term trends</p>
+    </a>
+  </div>
+</body>
+</html>
+
