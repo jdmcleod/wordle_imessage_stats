@@ -4,68 +4,205 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wordle Chat Stats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
       padding: 2em;
-      background-color: #f5f5f5;
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 3em;
-    }
-    .chart-links {
-      display: flex;
-      gap: 2em;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .chart-card {
-      background: white;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
-      min-width: 250px;
-    }
-    .chart-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      text-decoration: none;
-      color: inherit;
-    }
-    .chart-card h2 {
-      margin-top: 0;
       color: #333;
     }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 4em;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    .header h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-bottom: 0.3em;
+      letter-spacing: -0.02em;
+    }
+
+    .header p {
+      font-size: 1.3em;
+      color: rgba(255,255,255,0.9);
+      font-weight: 300;
+    }
+
+    .chart-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5em;
+      justify-content: center;
+    }
+
+    .chart-card {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 3em 2.5em;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(255,255,255,0.2);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .chart-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .chart-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .chart-card:hover::before {
+      left: 100%;
+    }
+
+    .chart-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .chart-card .icon {
+      font-size: 3.5em;
+      margin-bottom: 0.5em;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    .chart-card h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.8em;
+      position: relative;
+    }
+
     .chart-card p {
-      color: #666;
-      margin-bottom: 0;
+      font-size: 1.1em;
+      color: #7f8c8d;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .daily-card {
+      background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    }
+
+    .daily-card h2,
+    .daily-card p {
+      color: white;
+    }
+
+    .weekly-card {
+      background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    }
+
+    .weekly-card h2,
+    .weekly-card p {
+      color: white;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1em;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+      }
+
+      .header p {
+        font-size: 1.1em;
+      }
+
+      .chart-links {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+      }
+
+      .chart-card {
+        padding: 2em 1.5em;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Wordle Chat Stats Dashboard</h1>
-    <p>View your group's Wordle performance over time</p>
-  </div>
+  <div class="container">
+    <div class="header">
+      <h1>Wordle Analytics</h1>
+      <p>Discover insights from your group's Wordle performance</p>
+    </div>
 
-  <div class="chart-links">
-    <a href="wordle_stats_chart.html" class="chart-card">
-      <h2>📊 Daily Stats</h2>
-      <p>View individual daily Wordle scores for each player over time</p>
-    </a>
+    <div class="chart-links">
+      <a href="wordle_stats_chart.html" class="chart-card daily-card">
+        <span class="icon">📈</span>
+        <h2>Daily Performance</h2>
+        <p>Track individual daily scores and see how each player performs over time with detailed day-by-day analysis</p>
+      </a>
 
-    <a href="wordle_stats_weekly_chart.html" class="chart-card">
-      <h2>📈 Weekly Averages</h2>
-      <p>View weekly average scores to see longer-term trends</p>
-    </a>
+      <a href="wordle_stats_weekly_chart.html" class="chart-card weekly-card">
+        <span class="icon">📊</span>
+        <h2>Weekly Trends</h2>
+        <p>Analyze weekly average scores to identify long-term patterns and improvements in your group's performance</p>
+      </a>
+    </div>
   </div>
 </body>
 </html>
-

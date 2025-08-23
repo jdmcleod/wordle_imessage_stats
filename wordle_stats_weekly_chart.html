@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Wordle Weekly Stats Chart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Rubik', sans-serif;
       margin: 0;
       padding: 1em;
       height: 100vh;
@@ -15,14 +18,68 @@
     h1 {
       margin: 0 0 1em 0;
       text-align: center;
+      font-size: 2em;
+    }
+    .back-link {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      text-decoration: none;
+      color: #666;
+      font-size: 14px;
+      z-index: 10;
+    }
+    .back-link:hover {
+      color: #333;
     }
     #chart-container {
       width: 100%;
       height: calc(100vh - 80px);
+      min-width: 600px;
+      overflow-x: auto;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5em;
+        overflow-x: auto;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin: 2.5em 0 0.5em 0;
+        padding: 0 0.5em;
+      }
+
+      .back-link {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        margin-bottom: 1em;
+        font-size: 16px;
+      }
+
+      #chart-container {
+        height: calc(100vh - 120px);
+        min-width: 800px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.3em;
+      }
+
+      #chart-container {
+        height: calc(100vh - 100px);
+        min-width: 900px;
+      }
     }
   </style>
 </head>
 <body>
+  <a href="index.html" class="back-link">← Back to Dashboard</a>
   <h1>Wordle Weekly Average Stats Chart</h1>
   <div id="chart-container">
     <canvas id="stats-chart"></canvas>
@@ -32,11 +89,27 @@
       const allDates = new Set();
       data.forEach(person => {
         person.scores.forEach(s => {
-          const date = s.date.split('T')[0]; // Extract just the date part
+          const date = s.date.split('T')[0];
           allDates.add(date);
         });
       });
       const sortedDates = Array.from(allDates).sort();
+
+      // Calculate recent average (last 3 weeks) for each person
+      const recentCutoff = new Date();
+      recentCutoff.setDate(recentCutoff.getDate() - 21);
+      const recentCutoffStr = recentCutoff.toISOString().split('T')[0];
+
+      const recentAverages = data.map(person => {
+        const recentScores = person.scores.filter(s => s.date.split('T')[0] >= recentCutoffStr);
+        const avg = recentScores.length > 0 ?
+          recentScores.reduce((sum, s) => sum + s.score, 0) / recentScores.length : Infinity;
+        return { name: person.name, avg };
+      });
+
+      const bestPerformer = recentAverages.reduce((best, current) =>
+        current.avg < best.avg ? current : best
+      );
 
       const colors = [
         '#FF6B6B', '#a5ffb6', '#45B7D1', '#FECA57',
@@ -51,8 +124,12 @@
           const date = s.date.split('T')[0];
           dateToScore[date] = s.score;
         });
+
+        const label = person.name === bestPerformer.name ?
+          `${person.name} 🔥` : person.name;
+
         return {
-          label: person.name,
+          label,
           data: sortedDates.map(date => dateToScore[date] ?? null),
           borderColor: color,
           backgroundColor: color,
