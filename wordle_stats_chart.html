@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wordle Stats Line Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    #chart-container { width: 90vw; max-width: 900px; }
+  </style>
+</head>
+<body>
+  <h1>Wordle Stats Line Chart</h1>
+  <div id="chart-container">
+    <canvas id="stats-chart"></canvas>
+  </div>
+  <script>
+    function parseStats(data) {
+      const allDates = new Set();
+      data.forEach(person => {
+        person.scores.forEach(s => {
+          const date = s.date.split('T')[0]; // Extract just the date part
+          allDates.add(date);
+        });
+      });
+      const sortedDates = Array.from(allDates).sort();
+      const datasets = data.map((person, idx) => {
+        const color = `hsl(${idx * 60 % 360}, 70%, 50%)`;
+        const dateToScore = {};
+        person.scores.forEach(s => {
+          const date = s.date.split('T')[0];
+          dateToScore[date] = s.score;
+        });
+        return {
+          label: person.name,
+          data: sortedDates.map(date => dateToScore[date] ?? null),
+          borderColor: color,
+          backgroundColor: color,
+          spanGaps: true,
+          tension: 0.2
+        };
+      });
+      return { labels: sortedDates, datasets };
+    }
+
+    // Load data and draw chart on page load
+    fetch('data/wordle_stats.json')
+      .then(response => response.json())
+      .then(data => {
+        const chartData = parseStats(data);
+        const chart = new Chart(document.getElementById('stats-chart').getContext('2d'), {
+          type: 'line',
+          data: chartData,
+          options: {
+            responsive: true,
+            plugins: {
+              title: { display: true, text: 'Wordle Scores Per Day' },
+              legend: { display: true }
+            },
+            scales: {
+              y: {
+                title: { display: true, text: 'Score' },
+                beginAtZero: true,
+                reverse: true
+              },
+              x: { title: { display: true, text: 'Date' } }
+            }
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Error loading wordle stats:', error);
+        document.getElementById('chart-container').innerHTML = '<p>Error loading data. Make sure you are serving this file from a web server.</p>';
+      });
+  </script>
+</body>
+</html>
