@@ -2,6 +2,7 @@
 
 require_relative '../source/wordle_stats'
 require_relative '../source/wordle_stats_printer'
+require_relative '../source/export_stats_json'
 
 stats = WordleStats.new
 today_wordle = stats.today_wordle
@@ -12,3 +13,4 @@ else
 end
 
 
+ExportStatsJson.new.run
