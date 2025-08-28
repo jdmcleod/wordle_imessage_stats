@@ -7,8 +7,7 @@ require_relative 'wordle_stats'
 class ExportStatsJson
   def initialize
     @all_wordles = WordleChatParser.new.parse
-    one_month_ago = Date.today - 30
-    @month_wordles = @all_wordles.reject { it.date < one_month_ago }
+    @month_wordles = @all_wordles.reject { it.date < Date.today.prev_month }
     @grouped = @month_wordles.group_by(&:person)
     @all_grouped = @all_wordles.group_by(&:person)
   end
@@ -16,8 +15,6 @@ class ExportStatsJson
   def run
     export_daily_stats
     export_weekly_stats
-    puts "Exported stats to data/wordle_stats.json"
-    puts "Exported weekly averages to data/wordle_stats_weekly.json"
   end
 
   private

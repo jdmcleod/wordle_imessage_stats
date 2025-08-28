@@ -20,7 +20,7 @@ class MonthWinnerTable
 
       wordles_in_period = grouped_in_period start_date, end_date
 
-      (1..10).each_with_object({}) do |position, hash|
+      (1..11).each_with_object({}) do |position, hash|
         position_key = case position
                        when 1 then :first
                        when 2 then :second
