@@ -53,12 +53,10 @@
       }
 
       .back-link {
-        position: relative;
-        top: auto;
-        left: auto;
         display: block;
         margin-bottom: 1em;
         font-size: 16px;
+        padding: 20px;
       }
 
       #chart-container {
@@ -142,10 +140,14 @@
     }
 
     // Load data and draw chart on page load
-    fetch('data/wordle_stats.json')
+    fetch('https://api.jsonsilo.com/f9b3d14c-db19-402f-be2c-0a3cb3b76a40', {
+      headers: {
+        'X-SILO-KEY': 'AOl4NqwHvMDQvmduQoyC9dnPdq3koaYnlP2ypV0Sg0'
+      }
+    })
       .then(response => response.json())
       .then(data => {
-        const chartData = parseStats(data);
+        const chartData = parseStats(data.daily);
         const chart = new Chart(document.getElementById('stats-chart').getContext('2d'), {
           type: 'line',
           data: chartData,
@@ -205,7 +207,7 @@
       })
       .catch(error => {
         console.error('Error loading wordle stats:', error);
-        document.getElementById('chart-container').innerHTML = '<p>Error loading data. Make sure you are serving this file from a web server.</p>';
+        document.getElementById('chart-container').innerHTML = '<p>Error loading data. Make sure you have an internet connection.</p>';
       });
   </script>
 </body>

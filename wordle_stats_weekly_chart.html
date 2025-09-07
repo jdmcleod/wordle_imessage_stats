@@ -22,13 +22,11 @@
       font-size: 2em;
     }
     .back-link {
-      position: absolute;
-      top: 1em;
-      left: 1em;
       text-decoration: none;
       color: #666;
       font-size: 14px;
       z-index: 10;
+      padding: 20px;
     }
     .back-link:hover {
       color: #333;
@@ -53,12 +51,10 @@
       }
 
       .back-link {
-        position: relative;
-        top: auto;
-        left: auto;
         display: block;
         margin-bottom: 1em;
         font-size: 16px;
+        padding: 20px;
       }
 
       #chart-container {
@@ -142,10 +138,14 @@
     }
 
     // Load weekly data and draw chart on page load
-    fetch('data/wordle_stats_weekly.json')
+    fetch('https://api.jsonsilo.com/f9b3d14c-db19-402f-be2c-0a3cb3b76a40', {
+      headers: {
+        'X-SILO-KEY': 'AOl4NqwHvMDQvmduQoyC9dnPdq3koaYnlP2ypV0Sg0'
+      }
+    })
       .then(response => response.json())
       .then(data => {
-        const chartData = parseStats(data);
+        const chartData = parseStats(data.weekly);
         const chart = new Chart(document.getElementById('stats-chart').getContext('2d'), {
           type: 'line',
           data: chartData,
@@ -192,7 +192,7 @@
       })
       .catch(error => {
         console.error('Error loading wordle weekly stats:', error);
-        document.getElementById('chart-container').innerHTML = '<p>Error loading data. Make sure you are serving this file from a web server.</p>';
+        document.getElementById('chart-container').innerHTML = '<p>Error loading data. Make sure you have an internet connection.</p>';
       });
   </script>
 </body>
