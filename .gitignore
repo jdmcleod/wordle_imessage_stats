@@ -1,7 +1,4 @@
-data/all_wordle_words.txt
-data/chat.txt
-data/history.csv
-data/wordle_averages_cache.json
+data/
 spec/examples.txt
 .env
 bin/

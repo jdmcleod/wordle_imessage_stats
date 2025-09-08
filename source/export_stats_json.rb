@@ -109,11 +109,9 @@ class ExportStatsJson
       response = http.request(request)
 
       if response.code == '200' || response.code == '201'
-        puts "Successfully posted data to API"
-        puts "Response: #{response.body}"
+        puts "\n\nSuccessfully posted data to API"
       else
-        puts "Failed to post to API. Status: #{response.code}"
-        puts "Response: #{response.body}"
+        puts "\n\nFailed to post to API. Status: #{response.code}"
       end
     rescue => e
       puts "Error posting to API: #{e.message}"

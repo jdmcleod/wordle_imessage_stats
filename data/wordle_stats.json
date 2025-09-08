@@ -1,274 +1,8 @@
 {
   "daily": [
     {
-      "name": "Josh",
-      "scores": [
-        {
-          "date": "2025-08-07T00:17:08+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-08T11:55:57+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-09T08:36:35+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-10T08:30:58+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-11T08:17:34+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-12T08:52:21+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-13T18:29:42+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-14T12:33:21+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-15T09:08:11+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-16T12:30:14+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-17T08:37:40+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-18T08:42:25+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-19T08:08:07+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-20T12:29:23+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-21T13:51:57+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-22T09:28:43+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-23T14:21:00+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-24T09:04:50+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-25T06:22:06+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-26T06:53:48+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-27T06:44:23+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-28T09:54:22+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-29T08:50:35+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-30T09:37:10+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-31T08:51:13+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-01T08:05:57+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-02T07:46:22+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-09-03T07:06:34+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-09-04T09:47:03+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-05T07:23:12+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-06T08:36:30+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-09-07T08:58:46+00:00",
-          "score": 4
-        }
-      ]
-    },
-    {
-      "name": "Mary",
-      "scores": [
-        {
-          "date": "2025-08-07T08:04:51+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-08T07:52:23+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-09T17:22:11+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-10T09:14:01+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-11T10:25:13+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-12T12:55:21+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-13T09:17:48+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-14T09:32:13+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-15T09:21:46+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-16T22:09:50+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-17T09:11:02+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-18T09:02:22+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-19T08:46:09+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-20T09:52:06+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-21T11:51:53+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-22T09:07:08+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-23T14:49:13+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-24T16:36:55+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-25T08:30:06+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-26T14:54:00+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-27T08:51:33+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-28T08:55:00+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-29T09:53:54+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-30T08:43:01+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-31T08:35:10+00:00",
-          "score": 2
-        },
-        {
-          "date": "2025-09-01T12:19:33+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-09-02T10:51:25+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-03T09:45:56+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-09-04T09:18:38+00:00",
-          "score": 2
-        },
-        {
-          "date": "2025-09-05T08:31:34+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-09-06T11:24:38+00:00",
-          "score": 4
-        }
-      ]
-    },
-    {
       "name": "Grace",
       "scores": [
-        {
-          "date": "2025-08-07T08:07:45+00:00",
-          "score": 2
-        },
         {
           "date": "2025-08-08T00:09:29+00:00",
           "score": 4
@@ -396,12 +130,395 @@
       ]
     },
     {
-      "name": "Eleah",
+      "name": "Mary",
       "scores": [
         {
-          "date": "2025-08-07T11:28:07+00:00",
+          "date": "2025-08-08T07:52:23+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-09T17:22:11+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-10T09:14:01+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-11T10:25:13+00:00",
           "score": 3
         },
+        {
+          "date": "2025-08-12T12:55:21+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-13T09:17:48+00:00",
+          "score": 6
+        },
+        {
+          "date": "2025-08-14T09:32:13+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-15T09:21:46+00:00",
+          "score": 6
+        },
+        {
+          "date": "2025-08-16T22:09:50+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-17T09:11:02+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-18T09:02:22+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-19T08:46:09+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-20T09:52:06+00:00",
+          "score": 6
+        },
+        {
+          "date": "2025-08-21T11:51:53+00:00",
+          "score": 6
+        },
+        {
+          "date": "2025-08-22T09:07:08+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-23T14:49:13+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-24T16:36:55+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-25T08:30:06+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-26T14:54:00+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-27T08:51:33+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-28T08:55:00+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-29T09:53:54+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-30T08:43:01+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-31T08:35:10+00:00",
+          "score": 2
+        },
+        {
+          "date": "2025-09-01T12:19:33+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-09-02T10:51:25+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-03T09:45:56+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-09-04T09:18:38+00:00",
+          "score": 2
+        },
+        {
+          "date": "2025-09-05T08:31:34+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-06T11:24:38+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-07T17:24:31+00:00",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "name": "Melanie",
+      "scores": [
+        {
+          "date": "2025-08-08T11:20:15+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-09T13:09:52+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-10T09:08:59+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-11T09:07:19+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-12T08:52:56+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-13T09:52:09+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-14T13:11:49+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-15T09:24:58+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-16T12:41:04+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-17T09:29:46+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-18T10:29:13+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-19T11:13:30+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-20T09:51:00+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-21T14:23:41+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-22T12:47:54+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-23T14:32:29+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-24T09:23:06+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-25T10:30:00+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-26T13:57:49+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-27T10:37:40+00:00",
+          "score": 2
+        },
+        {
+          "date": "2025-08-28T15:14:29+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-29T12:31:00+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-30T09:46:00+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-31T07:27:35+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-01T13:48:13+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-02T10:37:17+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-03T14:17:32+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-04T10:14:31+00:00",
+          "score": 2
+        },
+        {
+          "date": "2025-09-05T09:14:38+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-06T09:19:08+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-07T13:43:32+00:00",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "name": "Josh",
+      "scores": [
+        {
+          "date": "2025-08-08T11:55:57+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-09T08:36:35+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-10T08:30:58+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-11T08:17:34+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-12T08:52:21+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-13T18:29:42+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-14T12:33:21+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-15T09:08:11+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-16T12:30:14+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-17T08:37:40+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-18T08:42:25+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-19T08:08:07+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-20T12:29:23+00:00",
+          "score": 6
+        },
+        {
+          "date": "2025-08-21T13:51:57+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-22T09:28:43+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-23T14:21:00+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-24T09:04:50+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-25T06:22:06+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-26T06:53:48+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-27T06:44:23+00:00",
+          "score": 6
+        },
+        {
+          "date": "2025-08-28T09:54:22+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-29T08:50:35+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-30T09:37:10+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-31T08:51:13+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-01T08:05:57+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-02T07:46:22+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-09-03T07:06:34+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-09-04T09:47:03+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-05T07:23:12+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-06T08:36:30+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-09-07T08:58:46+00:00",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "name": "Eleah",
+      "scores": [
         {
           "date": "2025-08-08T13:37:44+00:00",
           "score": 3
@@ -521,16 +638,16 @@
         {
           "date": "2025-09-06T10:30:04+00:00",
           "score": 4
+        },
+        {
+          "date": "2025-09-07T16:22:20+00:00",
+          "score": 4
         }
       ]
     },
     {
       "name": "Caleb",
       "scores": [
-        {
-          "date": "2025-08-07T11:59:17+00:00",
-          "score": 5
-        },
         {
           "date": "2025-08-08T18:19:37+00:00",
           "score": 3
@@ -658,137 +775,8 @@
       ]
     },
     {
-      "name": "Julia",
-      "scores": [
-        {
-          "date": "2025-08-07T12:27:09+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-09T13:50:29+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-10T11:05:14+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-11T09:47:03+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-12T11:12:26+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-13T19:09:53+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-14T08:24:56+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-15T09:00:10+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-16T08:41:47+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-17T09:06:40+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-18T18:56:15+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-19T08:14:33+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-20T09:53:22+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-21T12:12:48+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-22T08:20:43+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-23T17:58:32+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-24T07:40:00+00:00",
-          "score": 6
-        },
-        {
-          "date": "2025-08-25T08:42:42+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-26T15:16:15+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-27T08:34:51+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-28T08:16:51+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-29T12:31:36+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-30T09:45:43+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-08-31T08:14:11+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-09-01T09:09:31+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-03T12:08:51+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-04T08:16:17+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-05T14:01:24+00:00",
-          "score": 5
-        },
-        {
-          "date": "2025-09-06T13:58:54+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-09-07T08:51:12+00:00",
-          "score": 3
-        }
-      ]
-    },
-    {
       "name": "Jake",
       "scores": [
-        {
-          "date": "2025-08-07T12:28:03+00:00",
-          "score": 3
-        },
         {
           "date": "2025-08-08T19:30:57+00:00",
           "score": 3
@@ -908,135 +896,131 @@
         {
           "date": "2025-09-06T11:18:28+00:00",
           "score": 5
+        },
+        {
+          "date": "2025-09-07T09:02:16+00:00",
+          "score": 3
         }
       ]
     },
     {
-      "name": "Melanie",
+      "name": "Julia",
       "scores": [
         {
-          "date": "2025-08-07T15:06:22+00:00",
+          "date": "2025-08-09T13:50:29+00:00",
           "score": 4
         },
         {
-          "date": "2025-08-08T11:20:15+00:00",
+          "date": "2025-08-10T11:05:14+00:00",
           "score": 4
         },
         {
-          "date": "2025-08-09T13:09:52+00:00",
+          "date": "2025-08-11T09:47:03+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-08-12T11:12:26+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-13T19:09:53+00:00",
           "score": 5
         },
         {
-          "date": "2025-08-10T09:08:59+00:00",
-          "score": 3
+          "date": "2025-08-14T08:24:56+00:00",
+          "score": 6
         },
         {
-          "date": "2025-08-11T09:07:19+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-12T08:52:56+00:00",
+          "date": "2025-08-15T09:00:10+00:00",
           "score": 4
         },
         {
-          "date": "2025-08-13T09:52:09+00:00",
+          "date": "2025-08-16T08:41:47+00:00",
           "score": 4
         },
         {
-          "date": "2025-08-14T13:11:49+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-15T09:24:58+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-16T12:41:04+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-17T09:29:46+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-18T10:29:13+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-19T11:13:30+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-20T09:51:00+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-21T14:23:41+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-22T12:47:54+00:00",
-          "score": 3
-        },
-        {
-          "date": "2025-08-23T14:32:29+00:00",
+          "date": "2025-08-17T09:06:40+00:00",
           "score": 5
         },
         {
-          "date": "2025-08-24T09:23:06+00:00",
+          "date": "2025-08-18T18:56:15+00:00",
           "score": 5
         },
         {
-          "date": "2025-08-25T10:30:00+00:00",
-          "score": 4
+          "date": "2025-08-19T08:14:33+00:00",
+          "score": 6
         },
         {
-          "date": "2025-08-26T13:57:49+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-27T10:37:40+00:00",
-          "score": 2
-        },
-        {
-          "date": "2025-08-28T15:14:29+00:00",
-          "score": 4
-        },
-        {
-          "date": "2025-08-29T12:31:00+00:00",
+          "date": "2025-08-20T09:53:22+00:00",
           "score": 5
         },
         {
-          "date": "2025-08-30T09:46:00+00:00",
+          "date": "2025-08-21T12:12:48+00:00",
           "score": 4
         },
         {
-          "date": "2025-08-31T07:27:35+00:00",
+          "date": "2025-08-22T08:20:43+00:00",
           "score": 4
         },
         {
-          "date": "2025-09-01T13:48:13+00:00",
+          "date": "2025-08-23T17:58:32+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-24T07:40:00+00:00",
+          "score": 6
+        },
+        {
+          "date": "2025-08-25T08:42:42+00:00",
           "score": 4
         },
         {
-          "date": "2025-09-02T10:37:17+00:00",
+          "date": "2025-08-26T15:16:15+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-08-27T08:34:51+00:00",
           "score": 4
         },
         {
-          "date": "2025-09-03T14:17:32+00:00",
+          "date": "2025-08-28T08:16:51+00:00",
+          "score": 4
+        },
+        {
+          "date": "2025-08-29T12:31:36+00:00",
           "score": 3
         },
         {
-          "date": "2025-09-04T10:14:31+00:00",
-          "score": 2
+          "date": "2025-08-30T09:45:43+00:00",
+          "score": 5
         },
         {
-          "date": "2025-09-05T09:14:38+00:00",
+          "date": "2025-08-31T08:14:11+00:00",
           "score": 4
         },
         {
-          "date": "2025-09-06T09:19:08+00:00",
-          "score": 4
+          "date": "2025-09-01T09:09:31+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-03T12:08:51+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-04T08:16:17+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-05T14:01:24+00:00",
+          "score": 5
+        },
+        {
+          "date": "2025-09-06T13:58:54+00:00",
+          "score": 3
+        },
+        {
+          "date": "2025-09-07T08:51:12+00:00",
+          "score": 3
         }
       ]
     },
@@ -1132,6 +1116,10 @@
         {
           "date": "2025-09-07T00:19:55+00:00",
           "score": 4
+        },
+        {
+          "date": "2025-09-08T01:40:19+00:00",
+          "score": 5
         }
       ]
     }
@@ -1918,7 +1906,7 @@
         },
         {
           "date": "2025-09-01",
-          "score": 3.83
+          "score": 3.71
         }
       ]
     },
@@ -2277,7 +2265,7 @@
         },
         {
           "date": "2025-09-01",
-          "score": 3.5
+          "score": 3.43
         }
       ]
     },
@@ -2338,7 +2326,7 @@
         },
         {
           "date": "2025-09-01",
-          "score": 3.0
+          "score": 3.14
         }
       ]
     },
@@ -2399,7 +2387,7 @@
         },
         {
           "date": "2025-09-01",
-          "score": 3.83
+          "score": 3.86
         }
       ]
     },
@@ -2462,46 +2450,46 @@
         {
           "date": "2025-09-01",
           "score": 3.71
+        },
+        {
+          "date": "2025-09-08",
+          "score": 5.0
         }
       ]
     }
   ],
   "daily_messages": [
     {
-      "date": "2025-08-24",
-      "message": "⏰ Aug 24's Wordle (1527, SPORE) was harder than 83% of all 271 chat Wordles\n🎯Chat averaged 4.63 (NYT average of 4.2)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Caleb (in 3 with 40% information)"
-    },
-    {
       "date": "2025-08-25",
-      "message": "⏰ Aug 25's Wordle (1528, MIRTH) was harder than 76% of all 271 chat Wordles\n🎯Chat averaged 4.5 (NYT average of 4.6)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Josh (in 3 with 40% information)"
+      "message": "⏰ Aug 25's Wordle (1528, MIRTH) was harder than 79% of all 272 chat Wordles\n🎯Chat averaged 4.5 (NYT average of 4.6)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Josh (in 3 with 40% information)"
     },
     {
       "date": "2025-08-26",
-      "message": "⏰ Aug 26's Wordle (1529, ANNEX) was harder than 80% of all 271 chat Wordles\n🎯Chat averaged 4.56 (NYT average of 4.7)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Grace (in 4 with 47% information) and Melanie (in 4 with 47% information)"
+      "message": "⏰ Aug 26's Wordle (1529, ANNEX) was harder than 80% of all 272 chat Wordles\n🎯Chat averaged 4.56 (NYT average of 4.7)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Grace (in 4 with 47% information) and Melanie (in 4 with 47% information)"
     },
     {
       "date": "2025-08-27",
-      "message": "⏰ Aug 27's Wordle (1530, TOWER) was harder than 46% of all 271 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 4.4)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Melanie (in 2 with 13% information)"
+      "message": "⏰ Aug 27's Wordle (1530, TOWER) was harder than 44% of all 272 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 4.4)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Melanie (in 2 with 13% information)"
     },
     {
       "date": "2025-08-28",
-      "message": "⏰ Aug 28's Wordle (1531, SPLIT) was harder than 21% of all 271 chat Wordles\n🎯Chat averaged 3.56 (NYT average of 3.9)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Jeremy (in 3 with 47% information)"
+      "message": "⏰ Aug 28's Wordle (1531, SPLIT) was harder than 22% of all 272 chat Wordles\n🎯Chat averaged 3.56 (NYT average of 3.9)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Jeremy (in 3 with 47% information)"
     },
     {
       "date": "2025-08-29",
-      "message": "⏰ Aug 29's Wordle (1532, GRAFT) was harder than 36% of all 271 chat Wordles\n🎯Chat averaged 3.78 (NYT average of 4.5)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Mary (in 3 with 47% information)"
+      "message": "⏰ Aug 29's Wordle (1532, GRAFT) was harder than 36% of all 272 chat Wordles\n🎯Chat averaged 3.78 (NYT average of 4.5)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Mary (in 3 with 47% information)"
     },
     {
       "date": "2025-08-30",
-      "message": "⏰ Aug 30's Wordle (1533, ELATE) was harder than 57% of all 271 chat Wordles\n🎯Chat averaged 4.11 (NYT average of 4.5)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Jeremy (in 2 with 80% information)"
+      "message": "⏰ Aug 30's Wordle (1533, ELATE) was harder than 57% of all 272 chat Wordles\n🎯Chat averaged 4.11 (NYT average of 4.5)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Jeremy (in 2 with 80% information)"
     },
     {
       "date": "2025-08-31",
-      "message": "⏰ Aug 31's Wordle (1534, PETAL) was harder than 11% of all 271 chat Wordles\n🎯Chat averaged 3.3 (NYT average of 3.8)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Mary (in 2 with 27% information)"
+      "message": "⏰ Aug 31's Wordle (1534, PETAL) was harder than 11% of all 272 chat Wordles\n🎯Chat averaged 3.3 (NYT average of 3.8)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Mary (in 2 with 27% information)"
     },
     {
       "date": "2025-09-01",
-      "message": "⏰ Sep 01's Wordle (1535, LEAST) was harder than 5% of all 271 chat Wordles\n🎯Chat averaged 3.1 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Eleah (in 2 with 33% information)"
+      "message": "⏰ Sep 01's Wordle (1535, LEAST) was harder than 5% of all 272 chat Wordles\n🎯Chat averaged 3.1 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Eleah (in 2 with 33% information)"
     },
     {
       "date": "2025-09-02",
@@ -2509,19 +2497,23 @@
     },
     {
       "date": "2025-09-03",
-      "message": "⏰ Sep 03's Wordle (1537, FETCH) was harder than 30% of all 271 chat Wordles\n🎯Chat averaged 3.67 (NYT average of 4.1)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Grace (in 3 with 27% information)"
+      "message": "⏰ Sep 03's Wordle (1537, FETCH) was harder than 30% of all 272 chat Wordles\n🎯Chat averaged 3.67 (NYT average of 4.1)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Grace (in 3 with 27% information)"
     },
     {
       "date": "2025-09-04",
-      "message": "⏰ Sep 04's Wordle (1538, BLEND) was harder than 3% of all 271 chat Wordles\n🎯Chat averaged 2.9 (NYT average of 3.7)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Mary (in 2 with 27% information) and Melanie (in 2 with 27% information) and Eleah (in 2 with 27% information)"
+      "message": "⏰ Sep 04's Wordle (1538, BLEND) was harder than 3% of all 272 chat Wordles\n🎯Chat averaged 2.9 (NYT average of 3.7)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Mary (in 2 with 27% information) and Melanie (in 2 with 27% information) and Eleah (in 2 with 27% information)"
     },
     {
       "date": "2025-09-05",
-      "message": "⏰ Sep 05's Wordle (1539, DRIFT) was harder than 45% of all 271 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Josh (in 3 with 40% information)"
+      "message": "⏰ Sep 05's Wordle (1539, DRIFT) was harder than 49% of all 272 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Josh (in 3 with 40% information)"
     },
     {
       "date": "2025-09-06",
-      "message": "⏰ Yesterday's Wordle (1540, BULGE) was harder than 56% of all 271 chat Wordles\n🎯Chat averaged 4.11 (NYT average of 4.3)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Julia (in 3 with 47% information)"
+      "message": "⏰ Sep 06's Wordle (1540, BULGE) was harder than 56% of all 272 chat Wordles\n🎯Chat averaged 4.11 (NYT average of 4.3)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Julia (in 3 with 47% information)"
+    },
+    {
+      "date": "2025-09-07",
+      "message": "⏰ Yesterday's Wordle (1541, TENOR) was harder than 21% of all 272 chat Wordles\n🎯Chat averaged 3.56 (NYT average of 3.7)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Caleb (in 3 with 40% information)"
     }
   ]
 }
