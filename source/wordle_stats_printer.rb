@@ -7,10 +7,16 @@ class WordleStatsPrinter
   end
 
   def print
-    puts "⏰ #{relative_date}'s Wordle (#{wordle.wordle_number}, #{wordle.answer}) was harder than #{difficulty_percentile}% of all #{stats.total} chat Wordles"
-    puts "🎯Chat averaged #{wordle.average_score} (NYT average of #{worldwide_average})"
-    puts attempts
-    puts "🔥Best guess -> #{wordle.most_impressive_guess.map(&:to_player_string_with_score).join(' and ')}"
+    puts to_s
+  end
+
+  def to_s
+    lines = []
+    lines << "⏰ #{relative_date}'s Wordle (#{wordle.wordle_number}, #{wordle.answer}) was harder than #{difficulty_percentile}% of all #{stats.total} chat Wordles"
+    lines << "🎯Chat averaged #{wordle.average_score} (NYT average of #{worldwide_average})"
+    lines << attempts
+    lines << "🔥Best guess -> #{wordle.most_impressive_guess.map(&:to_player_string_with_score).join(' and ')}"
+    lines.join("\n")
   end
 
   private

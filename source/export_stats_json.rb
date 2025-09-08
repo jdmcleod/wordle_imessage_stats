@@ -5,6 +5,7 @@ require 'uri'
 require 'active_support/core_ext/date'
 require_relative 'wordle_chat_parser'
 require_relative 'wordle_stats'
+require_relative 'wordle_stats_printer'
 
 class ExportStatsJson
   def initialize
@@ -12,15 +13,18 @@ class ExportStatsJson
     @month_wordles = @all_wordles.reject { it.date < Date.today.prev_month }
     @grouped = @month_wordles.group_by(&:person)
     @all_grouped = @all_wordles.group_by(&:person)
+    @stats = WordleStats.new
   end
 
   def run
     daily_data = export_daily_stats
     weekly_data = export_weekly_stats
+    daily_messages = export_daily_messages
 
     combined_data = {
       daily: daily_data,
-      weekly: weekly_data
+      weekly: weekly_data,
+      daily_messages: daily_messages
     }
 
     put_in_json_store(combined_data)
@@ -50,6 +54,35 @@ class ExportStatsJson
         scores: weekly_scores
       }
     end
+  end
+
+  def export_daily_messages
+    last_14_days = (0..13).map { |i| Date.today - i }.reverse
+
+    last_14_days.map do |date|
+      wordle_for_date = @stats.stats.find { |w| w.date.to_date == date }
+
+      if wordle_for_date
+        # Capture the output from WordleStatsPrinter
+        message = capture_wordle_stats_output(wordle_for_date)
+        {
+          date: date,
+          message: message
+        }
+      else
+        {
+          date: date,
+          message: nil
+        }
+      end
+    end
+  end
+
+  def capture_wordle_stats_output(wordle)
+    printer = WordleStatsPrinter.new(@stats, wordle)
+    printer.to_s
+  rescue => e
+    "Error generating message for #{wordle.date}: #{e.message}"
   end
 
   def put_in_json_store(data)

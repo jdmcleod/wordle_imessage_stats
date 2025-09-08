@@ -2465,5 +2465,63 @@
         }
       ]
     }
+  ],
+  "daily_messages": [
+    {
+      "date": "2025-08-25",
+      "message": "⏰ Aug 25's Wordle (1528, MIRTH) was harder than 76% of all 271 chat Wordles\n🎯Chat averaged 4.5 (NYT average of 4.6)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Josh (in 3 with 40% information)"
+    },
+    {
+      "date": "2025-08-26",
+      "message": "⏰ Aug 26's Wordle (1529, ANNEX) was harder than 80% of all 271 chat Wordles\n🎯Chat averaged 4.56 (NYT average of 4.7)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Grace (in 4 with 47% information) and Melanie (in 4 with 47% information)"
+    },
+    {
+      "date": "2025-08-27",
+      "message": "⏰ Aug 27's Wordle (1530, TOWER) was harder than 46% of all 271 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 4.4)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Melanie (in 2 with 13% information)"
+    },
+    {
+      "date": "2025-08-28",
+      "message": "⏰ Aug 28's Wordle (1531, SPLIT) was harder than 21% of all 271 chat Wordles\n🎯Chat averaged 3.56 (NYT average of 3.9)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Jeremy (in 3 with 47% information)"
+    },
+    {
+      "date": "2025-08-29",
+      "message": "⏰ Aug 29's Wordle (1532, GRAFT) was harder than 36% of all 271 chat Wordles\n🎯Chat averaged 3.78 (NYT average of 4.5)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Mary (in 3 with 47% information)"
+    },
+    {
+      "date": "2025-08-30",
+      "message": "⏰ Aug 30's Wordle (1533, ELATE) was harder than 57% of all 271 chat Wordles\n🎯Chat averaged 4.11 (NYT average of 4.5)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Jeremy (in 2 with 80% information)"
+    },
+    {
+      "date": "2025-08-31",
+      "message": "⏰ Aug 31's Wordle (1534, PETAL) was harder than 11% of all 271 chat Wordles\n🎯Chat averaged 3.3 (NYT average of 3.8)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Mary (in 2 with 27% information)"
+    },
+    {
+      "date": "2025-09-01",
+      "message": "⏰ Sep 01's Wordle (1535, LEAST) was harder than 5% of all 271 chat Wordles\n🎯Chat averaged 3.1 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Eleah (in 2 with 33% information)"
+    },
+    {
+      "date": "2025-09-02",
+      "message": null
+    },
+    {
+      "date": "2025-09-03",
+      "message": "⏰ Sep 03's Wordle (1537, FETCH) was harder than 30% of all 271 chat Wordles\n🎯Chat averaged 3.67 (NYT average of 4.1)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Grace (in 3 with 27% information)"
+    },
+    {
+      "date": "2025-09-04",
+      "message": "⏰ Sep 04's Wordle (1538, BLEND) was harder than 3% of all 271 chat Wordles\n🎯Chat averaged 2.9 (NYT average of 3.7)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Mary (in 2 with 27% information) and Melanie (in 2 with 27% information) and Eleah (in 2 with 27% information)"
+    },
+    {
+      "date": "2025-09-05",
+      "message": "⏰ Sep 05's Wordle (1539, DRIFT) was harder than 45% of all 271 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Josh (in 3 with 40% information)"
+    },
+    {
+      "date": "2025-09-06",
+      "message": "⏰ Yesterday's Wordle (1540, BULGE) was harder than 56% of all 271 chat Wordles\n🎯Chat averaged 4.11 (NYT average of 4.3)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Julia (in 3 with 47% information)"
+    },
+    {
+      "date": "2025-09-07",
+      "message": "⏰ Today's Wordle (1541, TENOR) was harder than 27% of all 271 chat Wordles\n🎯Chat averaged 3.6 (NYT average of )\n🟩🟩⬜⬜⬜ 5/11 attempts\n🔥Best guess -> Caleb (in 3 with 40% information)"
+    }
   ]
 }
