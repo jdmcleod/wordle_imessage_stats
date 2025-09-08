@@ -2468,6 +2468,10 @@
   ],
   "daily_messages": [
     {
+      "date": "2025-08-24",
+      "message": "⏰ Aug 24's Wordle (1527, SPORE) was harder than 83% of all 271 chat Wordles\n🎯Chat averaged 4.63 (NYT average of 4.2)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Caleb (in 3 with 40% information)"
+    },
+    {
       "date": "2025-08-25",
       "message": "⏰ Aug 25's Wordle (1528, MIRTH) was harder than 76% of all 271 chat Wordles\n🎯Chat averaged 4.5 (NYT average of 4.6)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Josh (in 3 with 40% information)"
     },
@@ -2518,10 +2522,6 @@
     {
       "date": "2025-09-06",
       "message": "⏰ Yesterday's Wordle (1540, BULGE) was harder than 56% of all 271 chat Wordles\n🎯Chat averaged 4.11 (NYT average of 4.3)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Julia (in 3 with 47% information)"
-    },
-    {
-      "date": "2025-09-07",
-      "message": "⏰ Today's Wordle (1541, TENOR) was harder than 27% of all 271 chat Wordles\n🎯Chat averaged 3.6 (NYT average of )\n🟩🟩⬜⬜⬜ 5/11 attempts\n🔥Best guess -> Caleb (in 3 with 40% information)"
     }
   ]
 }

@@ -57,7 +57,7 @@ class ExportStatsJson
   end
 
   def export_daily_messages
-    last_14_days = (0..13).map { |i| Date.today - i }.reverse
+    last_14_days = (0..13).map { |i| (Date.today - 1) - i }.reverse
 
     last_14_days.map do |date|
       wordle_for_date = @stats.stats.find { |w| w.date.to_date == date }
