@@ -1,10 +1,11 @@
 class PersonStats
-  attr_reader :person, :wordles, :all_wordles
+  attr_reader :person, :wordles, :all_wordles, :punish_misses
 
-  def initialize(person, wordles, all_worldes)
+  def initialize(person, wordles, all_worldes, punish_misses: false)
     @person = person
     @wordles = wordles
     @all_wordles = all_worldes
+    @punish_misses = punish_misses
   end
 
   def print_calculate
@@ -62,15 +63,18 @@ class PersonStats
 
   def average
     missing_wordle_numbers = all_wordles.map(&:wordle_number).uniq - wordles.map(&:wordle_number)
-
-    averages_for_missing = missing_wordle_numbers.sum do |wordle_number|
-      wordle_stats.calculate_average_score all_wordles.select { it.wordle_number == wordle_number }
-    end
-
-    total = wordles.sum(&:score_for_average) + averages_for_missing
+    total = wordles.sum(&:score_for_average) + averages_for_missing(missing_wordle_numbers)
     total_count = wordles.count + missing_wordle_numbers.count
 
     calc_average(total, total_count)
+  end
+
+  def averages_for_missing(missing_wordle_numbers)
+    return missing_wordle_numbers.count * 6 if punish_misses
+
+     missing_wordle_numbers.sum do |wordle_number|
+       wordle_stats.calculate_average_score all_wordles.select { it.wordle_number == wordle_number }
+     end
   end
 
   def print_average

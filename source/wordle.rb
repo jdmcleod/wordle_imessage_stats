@@ -103,9 +103,10 @@ class Wordle
     combined_columns = relevant_guesses.map(&:in_array).transpose
 
     score_for_each_column = combined_columns.map do |column|
-      next 3 if column.include?(Guess::GREEN)
-      next column.count(Guess::YELLOW) if column.include?(Guess::YELLOW) # multiple yellows in one column count as one each
-      0 # no greens or yellows
+      column_score = 0
+      column_score += 3 if column.include?(Guess::GREEN)
+      column_score += column.count(Guess::YELLOW) if column.include?(Guess::YELLOW) # multiple yellows in one column count as one each
+      next column_score
     end
 
     score_for_each_column.sum

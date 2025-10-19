@@ -95,7 +95,7 @@ class ExportStatsJson
 
     request = Net::HTTP::Patch.new(uri)
     request['Content-Type'] = 'application/json'
-    request['X-MAN-API'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3V1aWQiOiJzMGRLT3JPTGk2TWxsUDJJUFpDb2c2TGN5eUozIiwiaXNzIjoiaHR0cHM6Ly9qc29uc2lsby5jb20iLCJleHAiOjE3NTk4NjcwNzd9.zOjRlBAiL_wBS9qN7cVq4E6X7HmGpGbu898D0z4GCZg'
+    request['X-MAN-API'] = ENV['JSON_SILO_KEY']
     request.body = data.to_json
 
     request.body = {
@@ -109,7 +109,7 @@ class ExportStatsJson
       response = http.request(request)
 
       if response.code == '200' || response.code == '201'
-        puts "\n\nSuccessfully posted data to API"
+        # puts "\n\nSuccessfully posted data to API"
       else
         puts "\n\nFailed to post to API. Status: #{response.code}"
       end
