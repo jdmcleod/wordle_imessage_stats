@@ -8,7 +8,7 @@ require_relative '../source/month_winner_table'
 
 def stats_table_options(columns, title)
   {
-    color_scales: { avg: :gyr, '1': :b, '2': :b, '3': :b, '4': :b, '5': :b, '6': :b, 'X': :b, best_guess: :g, gFirst: :g, errors: :r },
+    color_scales: { avg: :gyr, '1': :b, '2': :b, '3': :b, '4': :b, '5': :b, '6': :b, 'X': :b, best_guess: :g, gFirst: :g },
     color: true,
     columns:,
     title:,

@@ -39,8 +39,8 @@ class PersonStats
       gFirst: greens_on_first_guess,
       # nYel: no_yellows,
       # blank: blank_first_guesses,
-      errors: errors,
-      avgTime: average_time,
+      # errors: errors,
+      # avgTime: average_time,
     }
   end
 
