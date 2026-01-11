@@ -36,6 +36,8 @@ class Wordle
   end
 
   def score
+    return 7 if guesses.length == 6 && guesses.last.incorrect?
+
     guesses.length
   end
 
@@ -56,7 +58,7 @@ class Wordle
   end
 
   def lost?
-    score == 6 && guesses.last.correct
+    score == 7
   end
 
   def greens

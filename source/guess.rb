@@ -42,12 +42,12 @@ class Guess
     (greens * 2) + yellows
   end
 
-  def correct
-    greens != 5
+  def correct?
+    greens == 5
   end
 
-  def incorrect
-    !correct
+  def incorrect?
+    !correct?
   end
 
   def weighted_hints

@@ -19,8 +19,9 @@ class WordleAverageWebScraper
       result = avg_element.text.to_f
       update_cache(wordle_number, result)
       result
+    rescue Selenium::WebDriver::Error::NoSuchElementError
+      nil
     rescue Selenium::WebDriver::Error::TimeoutError
-      puts "Timeout waiting for element with id 'avg'"
       nil
     rescue StandardError => e
       puts "An unexpected error occurred: #{e}"

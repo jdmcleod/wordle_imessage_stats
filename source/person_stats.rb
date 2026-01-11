@@ -36,7 +36,7 @@ class PersonStats
       '6': wordles.count { it.score == 6 },
       'X': wordles.count(&:lost?),
       best_guess: impressive_guesses,
-      gFirst: greens_on_first_guess,
+      # gFirst: greens_on_first_guess,
       # nYel: no_yellows,
       # blank: blank_first_guesses,
       # errors: errors,
