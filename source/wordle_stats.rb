@@ -9,7 +9,7 @@ require_relative 'wordle_statistic'
 require_relative 'luckiest_guess'
 
 class WordleStats
-  NUMBER_OF_PLAYERS_WHO_LEFT_CHAT = 1 # David
+  NUMBER_OF_PLAYERS_WHO_LEFT_CHAT = 1
 
   attr_reader :wordles, :stats, :total
 

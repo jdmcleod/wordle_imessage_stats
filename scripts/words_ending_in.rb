@@ -1,4 +1,3 @@
-# Replace path with the correct one if different
 filename = "data/all_wordle_words.txt"
 
 words_ending_with_ep = File.readlines(filename, chomp: true).select do |word|

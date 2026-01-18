@@ -7,16 +7,13 @@ require_relative '../source/wordle_history_updater'
 
 puts "Starting migration from chat.txt to wordle_results.csv..."
 
-# Update history first
 puts "Updating wordle history..."
 WordleHistoryUpdater.new.update
 
-# Parse chat.txt
 puts "Parsing chat.txt..."
 wordles = WordleChatParser.new.parse
 puts "Found #{wordles.count} wordle entries"
 
-# Save to CSV
 puts "Saving to CSV..."
 WordleCsvParser.new.save(wordles)
 

@@ -63,7 +63,6 @@ class ExportStatsJson
       wordle_for_date = @stats.stats.find { |w| w.date.to_date == date }
 
       if wordle_for_date
-        # Capture the output from WordleStatsPrinter
         message = capture_wordle_stats_output(wordle_for_date)
         {
           date: date,
@@ -86,7 +85,6 @@ class ExportStatsJson
   end
 
   def put_in_json_store(data)
-    # keep a local copy
     File.write(File.join('data', 'wordle_stats.json'), JSON.pretty_generate(data))
 
     uri = URI('https://api.jsonsilo.com/api/v1/manage/f9b3d14c-db19-402f-be2c-0a3cb3b76a40')
@@ -109,7 +107,6 @@ class ExportStatsJson
       response = http.request(request)
 
       if response.code == '200' || response.code == '201'
-        # puts "\n\nSuccessfully posted data to API"
       else
         puts "\n\nFailed to post to API. Status: #{response.code}"
       end

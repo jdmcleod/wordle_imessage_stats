@@ -4,7 +4,6 @@ require 'date'
 require_relative '../source/wordle_csv_parser'
 require_relative '../source/wordle_stats'
 
-# Calculate the current streak for each person
 def calculate_current_streaks
   yesterday = Date.today - 1
   yesterday_cutoff = Time.new(yesterday.year, yesterday.month, yesterday.day, 23, 59, 0)
@@ -13,24 +12,19 @@ def calculate_current_streaks
     Time.new(wordle.date.year, wordle.date.month, wordle.date.day) > yesterday_cutoff
   end
 
-  # Group by person
   grouped = all_wordles.group_by(&:person)
 
   streaks = grouped.map do |person, wordles|
-    # Sort by wordle number descending (most recent first)
     sorted_wordles = wordles.sort_by { |w| -w.wordle_number }
 
-    # Calculate current streak
     current_streak = 0
     expected_number = sorted_wordles.first.wordle_number
 
     sorted_wordles.each do |wordle|
-      # Check if this is the expected number and the person didn't lose
       if wordle.wordle_number == expected_number && !wordle.lost?
         current_streak += 1
         expected_number -= 1
       else
-        # If they lost or missed a day, streak ends
         break if wordle.wordle_number < expected_number
         break if wordle.lost?
       end

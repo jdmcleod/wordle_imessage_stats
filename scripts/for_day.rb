@@ -3,7 +3,6 @@
 require_relative '../source/wordle_stats'
 require_relative '../source/wordle_stats_printer'
 
-# Get Wordle number from command line argument
 wordle_number = ARGV[0] ? ARGV[0].to_i : nil
 
 stats = WordleStats.new

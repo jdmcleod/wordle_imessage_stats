@@ -98,16 +98,14 @@ class Wordle
     errors
   end
 
-  ##
-  # Greens count as 3 but only once per column and yellows count as 1
   def information_score
-    relevant_guesses = guesses[0...-1] # Exclude the last and correct guess
+    relevant_guesses = guesses[0...-1]
     combined_columns = relevant_guesses.map(&:in_array).transpose
 
     score_for_each_column = combined_columns.map do |column|
       column_score = 0
       column_score += 3 if column.include?(Guess::GREEN)
-      column_score += column.count(Guess::YELLOW) if column.include?(Guess::YELLOW) # multiple yellows in one column count as one each
+      column_score += column.count(Guess::YELLOW) if column.include?(Guess::YELLOW)
       next column_score
     end
 

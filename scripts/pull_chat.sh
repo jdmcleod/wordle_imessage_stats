@@ -58,4 +58,12 @@ cp "$wordlers_file" "./data/chat.txt"
 rm -rf "$temp_dir"
 
 echo "Chat file has been copied to ./data/chat.txt"
+
+# Automatically update CSV with new wordles from chat
+echo ""
+echo "Updating CSV with new wordles..."
+ruby scripts/update_csv_from_chat.rb
+
+echo ""
+echo "Done! CSV has been updated with any new wordles from chat."
 echo "Don't forget to create contacts.json if you haven't already!"

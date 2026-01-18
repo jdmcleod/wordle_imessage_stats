@@ -1,7 +1,5 @@
 require 'csv'
 
-##
-# Stats were pulled into the CSV by copying from https://wordfinder.yourdictionary.com/wordle/answers/
 class HistoryManager
   private_class_method :new
 
