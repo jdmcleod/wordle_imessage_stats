@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'date'
-require_relative '../source/wordle_chat_parser'
+require_relative '../source/wordle_csv_parser'
 require_relative '../source/wordle_stats'
 
 # Calculate the current streak for each person
@@ -9,7 +9,7 @@ def calculate_current_streaks
   yesterday = Date.today - 1
   yesterday_cutoff = Time.new(yesterday.year, yesterday.month, yesterday.day, 23, 59, 0)
 
-  all_wordles = WordleChatParser.new.parse.reject do |wordle|
+  all_wordles = WordleCsvParser.new.parse.reject do |wordle|
     Time.new(wordle.date.year, wordle.date.month, wordle.date.day) > yesterday_cutoff
   end
 

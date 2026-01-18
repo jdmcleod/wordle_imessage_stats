@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'date'
-require_relative 'wordle_chat_parser'
+require_relative 'wordle_csv_parser'
 require_relative 'wordle_average_web_scraper'
 require_relative 'most_impressive_guess'
 require_relative 'wordle_history_updater'
@@ -76,7 +76,7 @@ class WordleStats
 
   def fetch_wordles
     WordleHistoryUpdater.new.update
-    WordleChatParser.new.parse
+    WordleCsvParser.new.parse
   end
 
   def calculate_word_statistics

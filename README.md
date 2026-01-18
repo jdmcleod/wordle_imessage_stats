@@ -14,6 +14,10 @@ How cool would it be to have a message like this posted to your chat every day A
 
 Well, this explains how to do that. It would be good if you knew some ruby and basic mac terminal commands.
 
+## Data Storage
+
+**Note:** This system now uses CSV-based storage for better performance and accessibility. All Wordle data is stored in `data/wordle_results.csv`. See [CSV_MIGRATION.md](CSV_MIGRATION.md) for details on the data structure and migration process.
+
 ## Setup (for mac)
 
 1. Clone this repository

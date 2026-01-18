@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'wordle_csv_parser'
+
 class MonthWinnerTable
   def self.print
     new.print
@@ -65,6 +67,6 @@ class MonthWinnerTable
   end
 
   def wordles
-    @wordles ||= WordleChatParser.new.parse
+    @wordles ||= WordleCsvParser.new.parse
   end
 end

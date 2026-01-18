@@ -14,7 +14,14 @@ class WordleAverageWebScraper
       driver.get(URL)
       wait = Selenium::WebDriver::Wait.new(timeout: 10)
       select_element = wait.until { driver.find_element(id: 'wordlenum') }
-      select_element.find_element(css: "option[value='#{wordle_number}']").click
+
+      # Try to find and click the option, rescue if not found
+      begin
+        select_element.find_element(css: "option[value='#{wordle_number}']").click
+      rescue Selenium::WebDriver::Error::NoSuchElementError
+        return nil
+      end
+
       avg_element = wait.until { driver.find_element(id: 'avg') }
       result = avg_element.text.to_f
       update_cache(wordle_number, result)

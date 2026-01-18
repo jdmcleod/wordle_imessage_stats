@@ -2,7 +2,7 @@
 
 require 'table_tennis'
 require_relative '../source/person_stats'
-require_relative '../source/wordle_chat_parser'
+require_relative '../source/wordle_csv_parser'
 require_relative '../source/wordle_stats'
 require_relative '../source/month_winner_table'
 
@@ -20,7 +20,7 @@ end
 def print_from_date(cutoff_date = Date.today - 1000, table_name = 'Wordle Stats', punish_misses: false)
   yesterday = Date.today - 1
   yesterday_cutoff = Time.new(yesterday.year, yesterday.month, yesterday.day, 23, 59, 0)
-  all_worldes = WordleChatParser.new.parse.reject do |wordle|
+  all_worldes = WordleCsvParser.new.parse.reject do |wordle|
     wordle.date.to_date < cutoff_date || Time.new(wordle.date.year, wordle.date.month, wordle.date.day) > yesterday_cutoff
   end
 

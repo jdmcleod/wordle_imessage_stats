@@ -3,13 +3,13 @@ require 'date'
 require 'net/http'
 require 'uri'
 require 'active_support/core_ext/date'
-require_relative 'wordle_chat_parser'
+require_relative 'wordle_csv_parser'
 require_relative 'wordle_stats'
 require_relative 'wordle_stats_printer'
 
 class ExportStatsJson
   def initialize
-    @all_wordles = WordleChatParser.new.parse
+    @all_wordles = WordleCsvParser.new.parse
     @month_wordles = @all_wordles.reject { it.date < Date.today.prev_month }
     @grouped = @month_wordles.group_by(&:person)
     @all_grouped = @all_wordles.group_by(&:person)
