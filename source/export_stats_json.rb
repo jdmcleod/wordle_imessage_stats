@@ -108,10 +108,10 @@ class ExportStatsJson
 
       if response.code == '200' || response.code == '201'
       else
-        puts "\n\nFailed to post to API. Status: #{response.code}"
+        # puts "\n\nFailed to post to API. Status: #{response.code}"
       end
     rescue => e
-      puts "Error posting to API: #{e.message}"
+      # puts "Error posting to API: #{e.message}"
     end
   end
 end

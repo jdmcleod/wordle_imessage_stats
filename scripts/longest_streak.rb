@@ -40,7 +40,7 @@ def print_streaks
   streaks = calculate_current_streaks
   longest_streak = streaks.first
 
-  puts "\n🔥 CURRENT WORDLE STREAKS 🔥\n\n"
+  puts "\nStreaks:\n\n"
 
   streaks.each_with_index do |stat, index|
     prefix = index == 0 ? "👑 " : "   "

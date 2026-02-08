@@ -6,18 +6,7 @@ require_relative 'wordle'
 class WordleCsvParser
   CSV_FILE = 'data/wordle_results.csv'
 
-  HEADERS = [
-    'wordle_number',
-    'date',
-    'person',
-    'wordle_word',
-    'score',
-    'nyt_average_score',
-    'chat_average_score',
-    'is_best_guess',
-    'is_luckiest_guess',
-    'guesses_data'
-  ].freeze
+  HEADERS = %w[wordle_number date person wordle_word score nyt_average_score chat_average_score is_best_guess is_luckiest_guess guesses_data].freeze
 
   def parse
     return [] unless File.exist?(CSV_FILE)

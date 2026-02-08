@@ -9,7 +9,6 @@ How cool would it be to have a message like this posted to your chat every day A
 🎯 Chat averaged 4.86 (NYT average of 4.5)
 🟩🟩🟩🟩⬜ 7/8 attempts
 🔥 Most impressive guess was from Simba
-👏 Luckiest first guess was Bentley
 ```
 
 Well, this explains how to do that. It would be good if you knew some ruby and basic mac terminal commands.

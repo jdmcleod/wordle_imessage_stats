@@ -37,7 +37,7 @@ This is a Ruby-based project for analyzing Wordle game statistics from a group c
 - **CSV metadata must be preserved** when updating `wordle_results.csv`
 - Use `parse_with_metadata()` and `save_with_metadata()` for CSV operations
 - Never modify existing rows - only append new ones
-- Metadata includes: NYT averages, chat averages, best/luckiest guess flags
+- Metadata includes: NYT averages, chat averages, best guess flag
 
 ## Testing
 
