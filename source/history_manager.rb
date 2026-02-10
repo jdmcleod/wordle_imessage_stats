@@ -32,6 +32,14 @@ class HistoryManager
     result ? result[:answer] : nil
   end
 
+  def word_used_before?(word, current_wordle_number)
+    @@data.each do |number, entry|
+      next if number.to_i >= current_wordle_number.to_i
+      return true if entry[:answer]&.upcase == word.upcase
+    end
+    false
+  end
+
   private
 
   def load_history

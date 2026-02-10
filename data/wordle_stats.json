@@ -4,14 +4,6 @@
       "name": "Caleb",
       "scores": [
         {
-          "date": "2026-01-08T08:00:28+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-09T06:47:09+00:00",
-          "score": 4
-        },
-        {
           "date": "2026-01-10T07:10:35+00:00",
           "score": 3
         },
@@ -126,20 +118,24 @@
         {
           "date": "2026-02-07T06:59:13+00:00",
           "score": 4
+        },
+        {
+          "date": "2026-02-08T11:08:06+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-02-09T08:56:32+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-02-10T08:43:30+00:00",
+          "score": 3
         }
       ]
     },
     {
       "name": "Eleah",
       "scores": [
-        {
-          "date": "2026-01-08T11:35:14+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-09T11:24:07+00:00",
-          "score": 3
-        },
         {
           "date": "2026-01-10T14:33:17+00:00",
           "score": 4
@@ -255,20 +251,20 @@
         {
           "date": "2026-02-07T10:58:43+00:00",
           "score": 4
+        },
+        {
+          "date": "2026-02-08T13:24:17+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-02-09T11:40:48+00:00",
+          "score": 5
         }
       ]
     },
     {
       "name": "Grace",
       "scores": [
-        {
-          "date": "2026-01-08T07:33:26+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-01-09T12:05:37+00:00",
-          "score": 4
-        },
         {
           "date": "2026-01-10T09:03:10+00:00",
           "score": 4
@@ -384,20 +380,24 @@
         {
           "date": "2026-02-07T08:03:53+00:00",
           "score": 2
+        },
+        {
+          "date": "2026-02-08T07:53:29+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-02-09T08:26:58+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-02-10T07:42:49+00:00",
+          "score": 4
         }
       ]
     },
     {
       "name": "Jake",
       "scores": [
-        {
-          "date": "2026-01-08T09:26:53+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-01-09T11:42:21+00:00",
-          "score": 4
-        },
         {
           "date": "2026-01-10T15:00:52+00:00",
           "score": 5
@@ -513,20 +513,20 @@
         {
           "date": "2026-02-07T12:06:52+00:00",
           "score": 4
+        },
+        {
+          "date": "2026-02-08T11:15:11+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-02-09T08:23:35+00:00",
+          "score": 3
         }
       ]
     },
     {
       "name": "Jeremy",
       "scores": [
-        {
-          "date": "2026-01-08T08:37:07+00:00",
-          "score": 2
-        },
-        {
-          "date": "2026-01-09T19:17:34+00:00",
-          "score": 4
-        },
         {
           "date": "2026-01-10T12:15:10+00:00",
           "score": 4
@@ -642,33 +642,20 @@
         {
           "date": "2026-02-07T09:24:25+00:00",
           "score": 5
-        }
-      ]
-    },
-    {
-      "name": "Joby",
-      "scores": [
-        {
-          "date": "2026-01-08T09:30:48+00:00",
-          "score": 3
         },
         {
-          "date": "2026-01-12T07:55:59+00:00",
-          "score": 3
+          "date": "2026-02-08T11:14:52+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-02-09T15:19:18+00:00",
+          "score": 6
         }
       ]
     },
     {
       "name": "Josh",
       "scores": [
-        {
-          "date": "2026-01-08T07:46:16+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-09T13:19:56+00:00",
-          "score": 5
-        },
         {
           "date": "2026-01-10T15:33:32+00:00",
           "score": 4
@@ -780,117 +767,24 @@
         {
           "date": "2026-02-06T10:00:15+00:00",
           "score": 4
-        }
-      ]
-    },
-    {
-      "name": "Josiah",
-      "scores": [
+        },
         {
-          "date": "2026-01-08T08:27:29+00:00",
+          "date": "2026-02-07T21:41:36+00:00",
           "score": 3
         },
         {
-          "date": "2026-01-09T17:08:56+00:00",
-          "score": 7
+          "date": "2026-02-08T08:51:14+00:00",
+          "score": 6
         },
         {
-          "date": "2026-01-12T12:19:20+00:00",
-          "score": 5
-        },
-        {
-          "date": "2026-01-13T09:57:18+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-14T08:56:46+00:00",
-          "score": 2
-        },
-        {
-          "date": "2026-01-15T07:10:40+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-01-16T12:46:31+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-01-17T08:25:00+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-18T13:40:46+00:00",
-          "score": 5
-        },
-        {
-          "date": "2026-01-19T15:49:47+00:00",
-          "score": 5
-        },
-        {
-          "date": "2026-01-20T14:04:49+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-21T08:09:30+00:00",
-          "score": 5
-        },
-        {
-          "date": "2026-01-22T08:12:06+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-25T08:53:05+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-01-27T08:38:22+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-28T07:57:35+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-01-29T07:56:35+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-01-30T20:06:50+00:00",
-          "score": 5
-        },
-        {
-          "date": "2026-02-02T10:29:05+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-02-04T07:00:02+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-02-05T09:43:15+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-02-06T09:44:23+00:00",
-          "score": 4
-        },
-        {
-          "date": "2026-02-07T09:53:09+00:00",
-          "score": 4
+          "date": "2026-02-09T14:15:12+00:00",
+          "score": 6
         }
       ]
     },
     {
       "name": "Julia",
       "scores": [
-        {
-          "date": "2026-01-08T14:15:11+00:00",
-          "score": 2
-        },
-        {
-          "date": "2026-01-09T22:15:09+00:00",
-          "score": 3
-        },
         {
           "date": "2026-01-10T15:01:22+00:00",
           "score": 3
@@ -1002,16 +896,20 @@
         {
           "date": "2026-02-07T12:09:35+00:00",
           "score": 3
+        },
+        {
+          "date": "2026-02-08T13:37:05+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-02-09T08:22:32+00:00",
+          "score": 6
         }
       ]
     },
     {
       "name": "Mary",
       "scores": [
-        {
-          "date": "2026-01-08T08:06:53+00:00",
-          "score": 3
-        },
         {
           "date": "2026-01-10T22:03:49+00:00",
           "score": 5
@@ -1119,20 +1017,20 @@
         {
           "date": "2026-02-07T11:23:19+00:00",
           "score": 3
+        },
+        {
+          "date": "2026-02-08T08:40:39+00:00",
+          "score": 7
+        },
+        {
+          "date": "2026-02-09T11:53:20+00:00",
+          "score": 7
         }
       ]
     },
     {
       "name": "Melanie",
       "scores": [
-        {
-          "date": "2026-01-08T09:04:18+00:00",
-          "score": 3
-        },
-        {
-          "date": "2026-01-09T12:47:51+00:00",
-          "score": 3
-        },
         {
           "date": "2026-01-10T07:58:22+00:00",
           "score": 4
@@ -1244,6 +1142,112 @@
         {
           "date": "2026-02-07T08:05:50+00:00",
           "score": 5
+        },
+        {
+          "date": "2026-02-08T14:13:04+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-02-09T11:50:04+00:00",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "name": "Joby",
+      "scores": [
+        {
+          "date": "2026-01-12T07:55:59+00:00",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "name": "Josiah",
+      "scores": [
+        {
+          "date": "2026-01-12T12:19:20+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-01-13T09:57:18+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-01-14T08:56:46+00:00",
+          "score": 2
+        },
+        {
+          "date": "2026-01-15T07:10:40+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-01-16T12:46:31+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-01-17T08:25:00+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-01-18T13:40:46+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-01-19T15:49:47+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-01-20T14:04:49+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-01-21T08:09:30+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-01-22T08:12:06+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-01-25T08:53:05+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-01-27T08:38:22+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-01-28T07:57:35+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-01-29T07:56:35+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-01-30T20:06:50+00:00",
+          "score": 5
+        },
+        {
+          "date": "2026-02-02T10:29:05+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-02-04T07:00:02+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-02-05T09:43:15+00:00",
+          "score": 3
+        },
+        {
+          "date": "2026-02-06T09:44:23+00:00",
+          "score": 4
+        },
+        {
+          "date": "2026-02-07T09:53:09+00:00",
+          "score": 4
         }
       ]
     }
@@ -1494,7 +1498,11 @@
         },
         {
           "date": "2026-02-02",
-          "score": 4.0
+          "score": 4.14
+        },
+        {
+          "date": "2026-02-09",
+          "score": 6.0
         }
       ]
     },
@@ -1743,7 +1751,11 @@
         },
         {
           "date": "2026-02-02",
-          "score": 4.67
+          "score": 4.71
+        },
+        {
+          "date": "2026-02-09",
+          "score": 3.0
         }
       ]
     },
@@ -1992,7 +2004,11 @@
         },
         {
           "date": "2026-02-02",
-          "score": 3.5
+          "score": 3.71
+        },
+        {
+          "date": "2026-02-09",
+          "score": 3.0
         }
       ]
     },
@@ -2639,7 +2655,11 @@
         },
         {
           "date": "2026-02-02",
-          "score": 3.5
+          "score": 3.43
+        },
+        {
+          "date": "2026-02-09",
+          "score": 6.0
         }
       ]
     },
@@ -2925,7 +2945,11 @@
         },
         {
           "date": "2026-02-02",
-          "score": 4.33
+          "score": 4.14
+        },
+        {
+          "date": "2026-02-09",
+          "score": 2.0
         }
       ]
     },
@@ -3074,7 +3098,11 @@
         },
         {
           "date": "2026-02-02",
-          "score": 4.33
+          "score": 4.29
+        },
+        {
+          "date": "2026-02-09",
+          "score": 5.0
         }
       ]
     },
@@ -3223,7 +3251,11 @@
         },
         {
           "date": "2026-02-02",
-          "score": 4.17
+          "score": 4.57
+        },
+        {
+          "date": "2026-02-09",
+          "score": 7.0
         }
       ]
     },
@@ -3361,6 +3393,10 @@
         {
           "date": "2026-02-02",
           "score": 4.0
+        },
+        {
+          "date": "2026-02-09",
+          "score": 4.0
         }
       ]
     },
@@ -3461,67 +3497,71 @@
         },
         {
           "date": "2026-02-02",
-          "score": 4.5
+          "score": 4.57
+        },
+        {
+          "date": "2026-02-09",
+          "score": 6.0
         }
       ]
     }
   ],
   "daily_messages": [
     {
-      "date": "2026-01-25",
-      "message": "⏰ Jan 25's Wordle (1681, STRUT) was harder than 21% of all 424 chat Wordles\n🎯Chat averaged 3.6 (NYT average of 4.0)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Jake (in 2 with 40% information)"
-    },
-    {
-      "date": "2026-01-26",
-      "message": "⏰ Jan 26's Wordle (1682, FREAK) was harder than 88% of all 424 chat Wordles\n🎯Chat averaged 4.78 (NYT average of 4.6)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Caleb (in 4 with 60% information)"
-    },
-    {
       "date": "2026-01-27",
-      "message": "⏰ Jan 27's Wordle (1683, DUSKY) was harder than 37% of all 424 chat Wordles\n🎯Chat averaged 3.88 (NYT average of 4.6)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Caleb (in 3 with 13% information) and Grace (in 3 with 13% information)"
+      "message": "⏰ Jan 27's Wordle (1683, new, DUSKY) was harder than 36% of all 427 chat Wordles\n🎯Chat averaged 3.88 (NYT average of 4.6)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Caleb (in 3 with 13% information) and Grace (in 3 with 13% information)"
     },
     {
       "date": "2026-01-28",
-      "message": "⏰ Jan 28's Wordle (1684, CRUEL) was harder than 23% of all 424 chat Wordles\n🎯Chat averaged 3.6 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Jake (in 2 with 33% information)"
+      "message": "⏰ Jan 28's Wordle (1684, new, CRUEL) was harder than 22% of all 427 chat Wordles\n🎯Chat averaged 3.6 (NYT average of 3.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Jake (in 2 with 33% information)"
     },
     {
       "date": "2026-01-29",
-      "message": "⏰ Jan 29's Wordle (1685, FLAKY) was harder than 43% of all 424 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 4.2)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Caleb (in 3 with 40% information) and Melanie (in 3 with 40% information)"
+      "message": "⏰ Jan 29's Wordle (1685, new, FLAKY) was harder than 40% of all 427 chat Wordles\n🎯Chat averaged 4.0 (NYT average of 4.2)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Caleb (in 3 with 40% information) and Melanie (in 3 with 40% information)"
     },
     {
       "date": "2026-01-30",
-      "message": "⏰ Jan 30's Wordle (1686, JUMBO) was harder than 85% of all 424 chat Wordles\n🎯Chat averaged 4.7 (NYT average of 4.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Eleah (in 2 with 40% information)"
+      "message": "⏰ Jan 30's Wordle (1686, new, JUMBO) was harder than 85% of all 427 chat Wordles\n🎯Chat averaged 4.7 (NYT average of 4.9)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Eleah (in 2 with 40% information)"
     },
     {
       "date": "2026-01-31",
-      "message": "⏰ Jan 31's Wordle (1687, ALLOT) was harder than 4% of all 424 chat Wordles\n🎯Chat averaged 3.13 (NYT average of 4.1)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Jake (in 2 with 47% information) and Melanie (in 2 with 47% information)"
+      "message": "⏰ Jan 31's Wordle (1687, new, ALLOT) was harder than 4% of all 427 chat Wordles\n🎯Chat averaged 3.13 (NYT average of 4.1)\n🟩🟩🟩🟩⬜ 8/11 attempts\n🔥Best guess -> Jake (in 2 with 47% information) and Melanie (in 2 with 47% information)"
     },
     {
       "date": "2026-02-01",
-      "message": "⏰ Feb 01's Wordle (1688, SPINY) was harder than 66% of all 424 chat Wordles\n🎯Chat averaged 4.33 (NYT average of 4.3)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Josh (in 3 with 27% information)"
+      "message": "⏰ Feb 01's Wordle (1688, new, SPINY) was harder than 66% of all 427 chat Wordles\n🎯Chat averaged 4.33 (NYT average of 4.3)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Josh (in 3 with 27% information)"
     },
     {
       "date": "2026-02-02",
-      "message": "⏰ Feb 02's Wordle (1689, CIGAR) was harder than 27% of all 424 chat Wordles\n🎯Chat averaged 3.7 (NYT average of 4.1)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Julia (in 3 with 40% information)"
+      "message": "⏰ Feb 02's Wordle (1689, , CIGAR) was harder than 28% of all 427 chat Wordles\n🎯Chat averaged 3.7 (NYT average of 4.1)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Julia (in 3 with 40% information)"
     },
     {
       "date": "2026-02-03",
-      "message": "⏰ Feb 03's Wordle (1690, WEIGH) was harder than 62% of all 424 chat Wordles\n🎯Chat averaged 4.22 (NYT average of 4.2)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Eleah (in 3 with 40% information) and Josh (in 3 with 40% information)"
+      "message": "⏰ Feb 03's Wordle (1690, new, WEIGH) was harder than 61% of all 427 chat Wordles\n🎯Chat averaged 4.22 (NYT average of 4.2)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Eleah (in 3 with 40% information) and Josh (in 3 with 40% information)"
     },
     {
       "date": "2026-02-04",
-      "message": "⏰ Feb 04's Wordle (1691, CHIDE) was harder than 32% of all 424 chat Wordles\n🎯Chat averaged 3.8 (NYT average of 4.2)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Jake (in 3 with 40% information)"
+      "message": "⏰ Feb 04's Wordle (1691, new, CHIDE) was harder than 33% of all 427 chat Wordles\n🎯Chat averaged 3.8 (NYT average of 4.2)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Jake (in 3 with 40% information)"
     },
     {
       "date": "2026-02-05",
-      "message": "⏰ Feb 05's Wordle (1692, SWOOP) was harder than 70% of all 424 chat Wordles\n🎯Chat averaged 4.4 (NYT average of 4.6)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Jake (in 3 with 47% information)"
+      "message": "⏰ Feb 05's Wordle (1692, new, SWOOP) was harder than 71% of all 427 chat Wordles\n🎯Chat averaged 4.4 (NYT average of 4.6)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Jake (in 3 with 47% information)"
     },
     {
       "date": "2026-02-06",
-      "message": "⏰ Feb 06's Wordle (1693, GAVEL) was harder than 71% of all 424 chat Wordles\n🎯Chat averaged 4.4 (NYT average of 4.7)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Melanie (in 3 with 27% information)"
+      "message": "⏰ Feb 06's Wordle (1693, new, GAVEL) was harder than 71% of all 427 chat Wordles\n🎯Chat averaged 4.4 (NYT average of 4.7)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Melanie (in 3 with 27% information)"
     },
     {
       "date": "2026-02-07",
-      "message": "⏰ Yesterday's Wordle (1694, BLEAT) was harder than 32% of all 424 chat Wordles\n🎯Chat averaged 3.78 (NYT average of 4.2)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Grace (in 2 with 27% information)"
+      "message": "⏰ Feb 07's Wordle (1694, new, BLEAT) was harder than 28% of all 427 chat Wordles\n🎯Chat averaged 3.7 (NYT average of 4.2)\n🟩🟩🟩🟩🟩 10/11 attempts\n🔥Best guess -> Grace (in 2 with 27% information)"
+    },
+    {
+      "date": "2026-02-08",
+      "message": "⏰ Feb 08's Wordle (1695, new, EMBED) was harder than 84% of all 427 chat Wordles\n🎯Chat averaged 4.67 (NYT average of 4.9)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Julia (in 3 with 20% information)"
+    },
+    {
+      "date": "2026-02-09",
+      "message": "⏰ Yesterday's Wordle (1696, new, CELLO) was harder than 85% of all 427 chat Wordles\n🎯Chat averaged 4.67 (NYT average of 4.4)\n🟩🟩🟩🟩⬜ 9/11 attempts\n🔥Best guess -> Melanie (in 2 with 20% information)"
     }
   ]
 }

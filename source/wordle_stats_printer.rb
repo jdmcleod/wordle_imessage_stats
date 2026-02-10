@@ -12,7 +12,8 @@ class WordleStatsPrinter
 
   def to_s
     lines = []
-    lines << "⏰ #{relative_date}'s Wordle (#{wordle.wordle_number}, #{wordle.answer}) was harder than #{difficulty_percentile}% of all #{stats.total} chat Wordles"
+    new_word_indicator = is_new_word? ? "new" : "repeat"
+    lines << "⏰ #{relative_date}'s Wordle (#{wordle.wordle_number}, #{new_word_indicator}, #{wordle.answer}) was harder than #{difficulty_percentile}% of all #{stats.total} chat Wordles"
     lines << "🎯Chat averaged #{wordle.average_score} (NYT average of #{worldwide_average})"
     lines << attempts
     lines << "🔥Best guess -> #{wordle.most_impressive_guess.map(&:to_player_string_with_score).join(' and ')}"
@@ -48,5 +49,10 @@ class WordleStatsPrinter
     squares[0...green_squares] = '🟩' * green_squares if green_squares.positive?
 
     "#{squares} #{chat_completions}/#{stats.number_of_players} attempts"
+  end
+
+  def is_new_word?
+    return false if wordle.answer.nil? || wordle.answer.empty?
+    !HistoryManager.instance.word_used_before?(wordle.answer, wordle.wordle_number)
   end
 end
