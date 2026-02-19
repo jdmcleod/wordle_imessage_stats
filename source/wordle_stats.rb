@@ -35,6 +35,10 @@ class WordleStats
     @two_days_ago_wordle ||= stats[-3]
   end
 
+  def wordle_for_number(wordle_number)
+    stats.find { |w| w.wordle_number == wordle_number.to_i }
+  end
+
   def yesterday_wordle_index
     sorted_wordles.index { _1.wordle_number == recent.wordle_number }
   end

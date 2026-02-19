@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'wordle'
+require_relative 'wordles_csv_parser'
 
 class WordleChatParser
   REGEXP = /^Wordle \d+/
