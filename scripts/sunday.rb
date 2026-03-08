@@ -31,7 +31,12 @@ def get_stats_from_date(cutoff_date = Date.today - 1000, punish_misses: false)
   stats = grouped.map do |person, person_wordles|
     stats = PersonStats.new(person, person_wordles, all_worldes, punish_misses:)
     stats.calculate
-  end.sort_by { _1[:avg] }
+  end.sort_by { [_1[:avg], -_1[:best_guess]] }
+
+  medals = { 0 => '🥇', 1 => '🥈', 2 => '🥉' }
+  stats.each_with_index do |stat, i|
+    stat[:rank] = medals.fetch(i, '')
+  end
 
   stats
 end
@@ -143,8 +148,9 @@ def performance_level(percentile)
   end
 end
 
+saturday_cutoff = Date.today - 1
 stats = WordleStats.new
-wordles = stats.wordles
+wordles = stats.wordles.reject { |w| w.date.to_date > saturday_cutoff }
 
 weekly_averages = calculate_weekly_averages(wordles)
 
@@ -174,8 +180,8 @@ unless weekly_averages.empty?
     end
   end
 
-  puts "\nGenerating weekly report image..."
-  require_relative 'generate_week_image'
-  recent_weeks_data = weekly_averages.last(5)
+  # puts "\nGenerating weekly report image..."
+  # require_relative 'generate_week_image'
+  # recent_weeks_data = weekly_averages.last(5)
   # generate_week_image(weekly_stats, streaks, current_week, current_week_end, percentile, performance[:text], performance[:color], recent_weeks_data, all_averages)
 end

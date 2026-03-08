@@ -63,7 +63,7 @@ class MonthWinnerTable
       .map do |person, person_wordles|
         stats = PersonStats.new(person, person_wordles, target_wordles)
         stats.calculate
-      end.sort_by { it[:avg] }
+      end.sort_by { [it[:avg], -it[:best_guess]] }
   end
 
   def wordles

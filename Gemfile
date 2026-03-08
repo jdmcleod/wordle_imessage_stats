@@ -6,6 +6,8 @@ gem 'open-uri'
 gem 'table_tennis'
 gem 'selenium-webdriver'
 gem 'dotenv'
+gem 'prawn'
+gem 'prawn-table'
 
 group :development, :test do
   gem 'rspec'

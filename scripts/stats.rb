@@ -29,7 +29,7 @@ def print_from_date(cutoff_date = Date.today - 1000, table_name = 'Wordle Stats'
   stats = grouped.map do |person, person_wordles|
     stats = PersonStats.new(person, person_wordles, all_worldes, punish_misses:)
     stats.calculate
-  end.sort_by { _1[:avg] }
+  end.sort_by { [_1[:avg], -_1[:best_guess]] }
 
   puts TableTennis.new(stats, stats_table_options(stats.first.keys, table_name))
 end
